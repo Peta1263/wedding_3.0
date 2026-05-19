@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Z &amp; V · Wedding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --olive-dark: #344124;
+      --olive:      #4d5f35;
+      --gold:       #b88a38;
+      --gold-light: #d4a84b;
+      --muted:      #766f62;
+      --ink:        #202018;
+      --bg:         #fbf6ed;
+      --cream:      rgba(255,252,246,0.92);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      font-family: "Cormorant Garamond", serif;
+      background: var(--bg);
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    .gate-bg {
+      position: fixed; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(180deg, rgba(255,252,246,.20), rgba(251,246,237,.16)),
+        url("assets/silk-bg.webp");
+      background-repeat: repeat;
+      background-size: auto, 980px 980px;
+    }
+
+    .flower {
+      position: fixed; top: -70px; width: min(42vw, 620px);
+      height: auto; pointer-events: none; z-index: 1;
+      filter: drop-shadow(0 18px 26px rgba(72,55,34,.10));
+    }
+    .flower-left  { left: max(-130px, -6vw); }
+    .flower-right { right: max(-130px, -6vw); }
+
+    .flower-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      pointer-events: none;
+      z-index: 1;
+      filter: drop-shadow(0 14px 24px rgba(72,55,34,.10));
+    }
+
+    /* ── LANG ── */
+    .lang-switch {
+      position: fixed; top: 20px; right: 24px; z-index: 20;
+      display: flex; gap: 6px;
+    }
+    .lang-switch button {
+      border: 1px solid rgba(184,138,56,.28);
+      background: rgba(255,252,246,.78); backdrop-filter: blur(6px);
+      padding: 5px 10px; font-family: "Inter", sans-serif;
+      font-size: 11px; font-weight: 600; letter-spacing: .10em;
+      color: var(--olive-dark); cursor: pointer; border-radius: 999px;
+      transition: background .2s, color .2s;
+    }
+    .lang-switch button.active { background: var(--olive-dark); color: #fff; border-color: var(--olive-dark); }
+
+    /* ── MAIN WRAP ── */
+    .gate-wrap {
+      position: relative; z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* ── KICKER ── */
+    .gate-kicker {
+      font-family: "Inter", sans-serif; font-size: 10px; font-weight: 600;
+      letter-spacing: .24em; text-transform: uppercase; color: var(--muted);
+      margin-bottom: 10px;
+      transition: opacity .6s, transform .6s;
+    }
+
+    /* ── ENVELOPE SCENE ── */
+    .env-scene {
+      position: relative;
+      width: min(86vw, 600px);
+      /* natural height from envelope aspect ratio ~0.72 */
+      animation: floatEnvelope 5s ease-in-out infinite;
+      transition: transform .6s ease;
+    }
+    @keyframes floatEnvelope {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .env-imgs {
+      position: relative;
+      width: 100%;
+      padding-bottom: 72%; /* aspect ratio */
+    }
+    .env-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 28px 50px rgba(80,60,30,.18));
+      transition: opacity 1s ease, transform 1.2s cubic-bezier(.2,.72,.2,1);
+      pointer-events: none;
+      user-select: none;
+    }
+    .env-closed { opacity: 1; z-index: 3; }
+    .env-open   { opacity: 0; z-index: 2; }
+    .env-open {
+      transform: scale(1.35);
+    }
+
+    /* ── PASSWORD PANEL ── */
+    /* Variant 3: transparent card placed under the envelope */
+    .env-password {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(82%, 520px);
+      z-index: 10;
+
+      display: grid;
+      grid-template-columns: 1fr 1.65fr .82fr;
+      align-items: center;
+      gap: 16px;
+
+      background: rgba(255,252,246,0.58);
+      border: 1px solid rgba(255,255,255,.76);
+      border-radius: 14px;
+      box-shadow:
+        0 18px 42px rgba(55,44,27,.14),
+        0 0 0 1px rgba(184,138,56,.14) inset;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 12px 14px;
+      text-align: center;
+
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .env-password-label {
+      font-family: "Inter", sans-serif;
+      font-size: 9px; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--muted); display: block;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .input-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .gate-input {
+      width: 100%;
+      flex: 1;
+      padding: 11px 42px 11px 14px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px; font-weight: 400;
+      letter-spacing: .18em; color: var(--olive-dark);
+      background: rgba(255,252,246,.96);
+      border: 1px solid rgba(184,138,56,.32);
+      border-radius: 8px; outline: none; text-align: center;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .gate-input:focus {
+      border-color: rgba(184,138,56,.65);
+      box-shadow: 0 0 0 3px rgba(184,138,56,.09);
+    }
+    .gate-input::placeholder { color: rgba(118,111,98,.30); letter-spacing: .08em; }
+
+    .eye-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      opacity: .45;
+      padding: 6px;
+      flex-shrink: 0;
+      transition: opacity .2s;
+      line-height: 1;
+      z-index: 2;
+    }
+    .eye-btn:hover { opacity: .85; }
+
+    .gate-submit {
+      width: 100%; margin-top: 0;
+      padding: 12px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 14px; font-weight: 500; letter-spacing: .22em;
+      text-transform: uppercase; color: #fff;
+      background: var(--olive-dark); border: none; border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 5px 18px rgba(52,65,36,.24);
+      transition: background .2s, transform .15s;
+    }
+    .gate-submit:hover { background: var(--olive); transform: translateY(-1px); }
+    .gate-submit:active { transform: translateY(0); }
+
+    .gate-error {
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 8px);
+      transform: translateX(-50%);
+      width: 100%;
+      font-family: "Inter", sans-serif; font-size: 10px;
+      letter-spacing: .06em; color: #a8473a;
+      min-height: 14px; margin-top: 0;
+      opacity: 0; transition: opacity .25s;
+    }
+    .gate-error.visible { opacity: 1; }
+
+    /* ── TITLE below envelope (Great Vibes) ── */
+    .gate-title {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      font-weight: 400; color: var(--ink);
+      line-height: .9;
+      text-shadow: 0 2px 14px rgba(255,255,255,.30);
+      margin-top: 22px;
+      transition: opacity .6s, transform .6s;
+    }
+
+    /* ── OPENING STATES ── */
+    body.opening .env-scene   { animation: none; }
+    body.opening .env-closed  { opacity: 0; transform: scale(1.03); }
+    body.opening .env-open    { opacity: 1; transform: scale(1.03); }
+    body.opening .env-password { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    body.opening .gate-kicker,
+    body.opening .gate-title  { opacity: 0; transform: translateY(-10px); }
+
+    /* Soft glow */
+    .soft-glow {
+      position: fixed; inset: 0; z-index: 10; pointer-events: none; opacity: 0;
+      background: radial-gradient(circle at 50% 46%,
+        rgba(255,244,232,.72) 0%, rgba(255,244,232,.38) 30%,
+        rgba(255,244,232,.08) 55%, rgba(255,244,232,0) 72%);
+      filter: blur(22px); transition: opacity 1.2s ease;
+    }
+    body.opening .soft-glow { opacity: 1; }
+    body.opened  .soft-glow { opacity: 0; }
+
+    /* Sparkles */
+    .sparkles { position: fixed; inset: 0; z-index: 11; pointer-events: none; }
+    .spark {
+      position: absolute; width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,248,240,.95);
+      box-shadow: 0 0 10px rgba(255,255,255,.9), 0 0 18px rgba(255,244,232,.7);
+      opacity: 0; transform: scale(.6);
+    }
+    body.opening .spark { animation: sparkleFloat 1.8s ease forwards; }
+    .s1{top:22%;left:32%;animation-delay:.05s} .s2{top:28%;left:64%;animation-delay:.18s}
+    .s3{top:40%;left:24%;animation-delay:.30s} .s4{top:44%;left:74%;animation-delay:.42s}
+    .s5{top:56%;left:42%;animation-delay:.56s} .s6{top:62%;left:60%;animation-delay:.70s}
+    @keyframes sparkleFloat {
+      0%   { opacity:0;   transform:translateY(10px) scale(.4); }
+      20%  { opacity:.95; transform:translateY(0) scale(1); }
+      60%  { opacity:.75; transform:translateY(-14px) scale(.9); }
+      100% { opacity:0;   transform:translateY(-28px) scale(.4); }
+    }
+
+    @keyframes shake {
+      0%,100% { transform:translateX(0); }
+      20%     { transform:translateX(-7px); }
+      40%     { transform:translateX(7px); }
+      60%     { transform:translateX(-5px); }
+      80%     { transform:translateX(5px); }
+    }
+    .gate-input.shake { animation:shake .38s ease; border-color:rgba(168,71,58,.55)!important; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      html, body { overflow: hidden; }
+
+      .gate-bg {
+        background-image:
+          linear-gradient(180deg, rgba(255,252,246,.22), rgba(251,246,237,.18)),
+          url("assets/silk-bg-mobile.webp"),
+          url("assets/silk-bg.webp");
+        background-repeat: no-repeat, no-repeat, repeat;
+        background-size: cover, cover, 720px 720px;
+        background-position: center top, center top, center;
+      }
+
+      .flower { display: none; }
+      .flower-mobile {
+        display: block;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .lang-switch { top: 14px; right: 14px; }
+      .gate-wrap { justify-content: center; padding: 18px 14px 64px; }
+      .env-scene { width: min(94vw, 400px); }
+
+      .env-password {
+        top: 132%;
+        width: min(92vw, 340px);
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 14px 14px 13px;
+        background: rgba(255,252,246,0.70);
+        border-radius: 14px;
+      }
+      .env-password-label { font-size: 8px; letter-spacing: .20em; }
+      .gate-input { font-size: 16px; padding: 10px 10px; letter-spacing: .12em; }
+      .gate-submit { padding: 11px; font-size: 13px; }
+      .gate-title { font-size: 2.4rem; margin-top: 16px; }
+      .gate-kicker { font-size: 9px; margin-bottom: 8px; }
+    }
+
+    @media (max-width: 380px) {
+      .env-scene { width: 96vw; }
+      .env-password { width: 90vw; padding: 12px 12px 11px; }
+      .flower-mobile { object-position: center top; }
+    }
+  </style>
+</head>
+<body>
+  <div class="gate-bg"></div>
+  <img class="flower-mobile" src="assets/mobile-hero-flowers.png" alt="" aria-hidden="true">
+  <img class="flower flower-left"  src="assets/floral-top-left.png"  alt="" aria-hidden="true">
+  <img class="flower flower-right" src="assets/floral-top-right.png" alt="" aria-hidden="true">
+
+  <div class="soft-glow"></div>
+  <div class="sparkles" aria-hidden="true">
+    <div class="spark s1"></div><div class="spark s2"></div>
+    <div class="spark s3"></div><div class="spark s4"></div>
+    <div class="spark s5"></div><div class="spark s6"></div>
+  </div>
+
+  <div class="lang-switch">
+    <button type="button" data-lang="sk" class="active">SK</button>
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="it">IT</button>
+  </div>
+
+  <div class="gate-wrap">
+
+    <p class="gate-kicker" id="gateKicker">Máte poštu od Zuzany a Valeria</p>
+
+    <!-- Envelope with password card overlaid at bottom -->
+    <div class="env-scene" id="envScene">
+
+      <div class="env-imgs">
+        <img class="env-img env-closed" id="envClosed" src="assets/envelope-close.png" alt="">
+        <img class="env-img env-open"   id="envOpen"   src="assets/envelope-open.png"  alt="">
+      </div>
+
+      <!-- Password floats over the envelope bottom half -->
+      <div class="env-password" id="envPassword">
+        <span class="env-password-label" id="passLabel">Zadajte heslo pre hostí</span>
+
+        <div class="input-row">
+          <input class="gate-input" id="gateInput" type="password"
+                 placeholder="••••••••" autocomplete="off" spellcheck="false">
+          <button class="eye-btn" id="eyeBtn" type="button" aria-label="Zobraziť heslo">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/>
+              <circle cx="12" cy="12" r="3"/>
+              <line id="eyeSlash" x1="3" y1="3" x2="21" y2="21"
+                    stroke-dasharray="26" stroke-dashoffset="26"
+                    style="transition:stroke-dashoffset .25s"/>
+            </svg>
+          </button>
+        </div>
+
+        <button class="gate-submit" id="gateSubmit" type="button">Otvoriť</button>
+        <p class="gate-error" id="gateError">Nesprávne heslo. Skúste znova.</p>
+      </div>
+
+    </div>
+
+    
+
+  </div>
+
+  <script>
+    const PASSWORD  = "rimini2026";
+    const MAIN_PAGE = "index.html";
+
+    const body       = document.body;
+    const gateInput  = document.getElementById("gateInput");
+    const gateSubmit = document.getElementById("gateSubmit");
+    const gateError  = document.getElementById("gateError");
+    const eyeBtn     = document.getElementById("eyeBtn");
+    const eyeSlash   = document.getElementById("eyeSlash");
+
+    let opening = false;
+
+    const tr = {
+      sk: { kicker:"Máte poštu od Zuzany a Valeria", label:"Zadajte heslo pre hostí", submit:"Otvoriť", error:"Nesprávne heslo. Skúste znova." },
+      en: { kicker:"You have mail from Zuzana and Valerio", label:"Enter guest password",  submit:"Open",  error:"Wrong password. Please try again." },
+      it: { kicker:"Hai posta da Zuzana e Valerio", label:"Inserisci la password",       submit:"Apri",  error:"Password errata. Riprova." },
+    };
+    let lang = "sk";
+
+    function setLang(l) {
+      lang = l;
+      document.getElementById("gateKicker").textContent = tr[l].kicker;
+      document.getElementById("passLabel").textContent  = tr[l].label;
+      gateSubmit.textContent = tr[l].submit;
+      document.querySelectorAll(".lang-switch button")
+        .forEach(b => b.classList.toggle("active", b.dataset.lang === l));
+    }
+    document.querySelectorAll(".lang-switch button")
+      .forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+    let eyeVisible = false;
+    eyeBtn.addEventListener("click", () => {
+      eyeVisible = !eyeVisible;
+      gateInput.type = eyeVisible ? "text" : "password";
+      eyeSlash.style.strokeDashoffset = eyeVisible ? "0" : "26";
+    });
+
+    function attempt() {
+      if (opening) return;
+      const val = gateInput.value.trim();
+
+      if (val === PASSWORD) {
+        opening = true;
+        gateError.classList.remove("visible");
+        gateSubmit.textContent = "✓";
+        body.classList.add("opening");
+        setTimeout(() => {
+          body.classList.add("opened");
+          setTimeout(() => { window.location.href = MAIN_PAGE; }, 500);
+        }, 1900);
+      } else {
+        gateInput.classList.remove("shake");
+        void gateInput.offsetWidth;
+        gateInput.classList.add("shake");
+        gateError.textContent = tr[lang].error;
+        gateError.classList.add("visible");
+        gateInput.value = "";
+        gateInput.focus();
+        setTimeout(() => gateInput.classList.remove("shake"), 420);
+        setTimeout(() => gateError.classList.remove("visible"), 3200);
+      }
+    }
+
+    gateSubmit.addEventListener("click", attempt);
+    gateInput.addEventListener("keydown", e => {
+      if (e.key === "Enter") attempt();
+      if (e.key !== "Enter") gateError.classList.remove("visible");
+    });
+  </script>
+</body>
+</html>

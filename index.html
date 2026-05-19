@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zuzka & Valerio | Wedding</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-background">
+    <div class="background-art" aria-hidden="true"></div>
+    <img class="top-flower top-flower-left" src="floral-top-left.png" alt="" aria-hidden="true">
+    <img class="top-flower top-flower-right" src="floral-top-right.png" alt="" aria-hidden="true">
+    <div class="side-floral-layer" aria-hidden="true"></div>
+    <div class="bottom-landscape" aria-hidden="true"></div>
+
+  <!-- SVG piktogramy -->
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <path d="M7 3v3M17 3v3M4.5 9h15M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/>
+      <path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z"/>
+      <circle cx="12" cy="9" r="2.4"/>
+    </symbol>
+    <symbol id="icon-dress" viewBox="0 0 24 24">
+      <path d="M9 3h6l-1.2 5L18 21H6l4.2-13L9 3Z"/>
+      <path d="M9 3c.7 2 1.7 3 3 3s2.3-1 3-3"/>
+    </symbol>
+    <symbol id="icon-envelope" viewBox="0 0 24 24">
+      <path d="M4 6h16v12H4z"/>
+      <path d="m4 7 8 6 8-6"/>
+    </symbol>
+    <symbol id="icon-rings" viewBox="0 0 24 24">
+      <circle cx="9" cy="13" r="5"/>
+      <circle cx="15" cy="13" r="5"/>
+      <path d="M10 6h4l-2-3-2 3Z"/>
+    </symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24">
+      <path d="M4 8h4l1.5-2h5L16 8h4v11H4z"/>
+      <circle cx="12" cy="13.5" r="3.2"/>
+    </symbol>
+    <symbol id="icon-dinner" viewBox="0 0 24 24">
+      <path d="M6 3v18M4 3v6c0 1.4 1 2.4 2 2.4S8 10.4 8 9V3M16 3v18M16 3c2 1.5 3 3.3 3 5.2 0 2.3-1.3 4-3 4"/>
+    </symbol>
+    <symbol id="icon-music" viewBox="0 0 24 24">
+      <path d="M9 18V5l10-2v13"/>
+      <circle cx="6" cy="18" r="3"/>
+      <circle cx="16" cy="16" r="3"/>
+    </symbol>
+    <symbol id="icon-cake" viewBox="0 0 24 24">
+      <path d="M8 8h8v4H8zM6 12h12v4H6zM4 16h16v5H4z"/>
+      <path d="M12 5v3M12 3c1 1 1 1.7 0 2.5-1-.8-1-1.5 0-2.5Z"/>
+    </symbol>
+    <symbol id="icon-party" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M3 12h18M12 3c2.5 2.8 3.7 5.8 3.7 9S14.5 18.2 12 21M12 3c-2.5 2.8-3.7 5.8-3.7 9s1.2 6.2 3.7 9"/>
+    </symbol>
+    <symbol id="icon-plane" viewBox="0 0 24 24">
+      <path d="M21 4 3 11l7 2 2 7 9-16Z"/>
+      <path d="m10 13 4-4"/>
+    </symbol>
+    <symbol id="icon-hotel" viewBox="0 0 24 24">
+      <path d="M5 21V4h14v17M8 8h2M14 8h2M8 12h2M14 12h2M9 21v-5h6v5"/>
+    </symbol>
+    <symbol id="icon-bus" viewBox="0 0 24 24">
+      <path d="M6 4h12a2 2 0 0 1 2 2v10H4V6a2 2 0 0 1 2-2Z"/>
+      <path d="M4 10h16M7 19h.01M17 19h.01M7 16v3M17 16v3"/>
+    </symbol>
+    <symbol id="icon-car" viewBox="0 0 24 24">
+      <path d="M5 15h14l-1.5-5h-11L5 15Z"/>
+      <path d="M3 15h18v4H3z"/>
+      <circle cx="7" cy="19" r="1.5"/>
+      <circle cx="17" cy="19" r="1.5"/>
+    </symbol>
+    <symbol id="icon-coffee" viewBox="0 0 24 24">
+      <path d="M5 8h11v5a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5V8Z"/>
+      <path d="M16 10h2.2a2.2 2.2 0 1 1 0 4.4H16M5 20h13M8 5c0-1 1-1.2 1-2M12 5c0-1 1-1.2 1-2"/>
+    </symbol>
+    <symbol id="icon-beach" viewBox="0 0 24 24">
+      <path d="M3 17c2-1.3 4-1.3 6 0s4 1.3 6 0 4-1.3 6 0"/>
+      <path d="M5 13c2.5-4 7-5.5 12-3"/>
+      <path d="M11 10 9 21M11 10c1.5 1.2 2.5 2.7 3 4"/>
+    </symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24">
+      <path d="M6 8h12l1 13H5L6 8Z"/>
+      <path d="M9 8a3 3 0 0 1 6 0"/>
+      <path d="M12 13c1.5-2 4-.5 2.2 1.5L12 17l-2.2-2.5C8 12.5 10.5 11 12 13Z"/>
+    </symbol>
+    <symbol id="icon-gift" viewBox="0 0 24 24">
+      <path d="M4 9h16v12H4zM3 6h18v3H3zM12 6v15"/>
+      <path d="M12 6c-2-4-6-2-4 0 1 1 3 0 4 0Zm0 0c2-4 6-2 4 0-1 1-3 0-4 0Z"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M7 4 5 6c-.7.7-.8 1.7-.4 2.6 2 4.8 6 8.8 10.8 10.8.9.4 1.9.3 2.6-.4l2-2-4-4-2 2c-2.6-1.2-4.8-3.4-6-6l2-2-4-4Z"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a href="#home" class="logo">Z<span>&</span>V</a>
+
+    <nav class="nav" id="nav">
+      <div class="mobile-menu-logo" aria-hidden="true">Z <span>&amp;</span> V</div>
+      <a href="#home" data-i18n="nav_home">Home</a>
+      <a href="#program" data-i18n="nav_program">Program</a>
+      <a href="#miesta" data-i18n="nav_places">Miesta</a>
+      <a href="#travel" data-i18n="nav_travel">Travel</a>
+      <a href="#tipy" data-i18n="nav_tips">Tipy</a>
+      <a href="#info" data-i18n="nav_info">Info</a>
+      <a href="#faq">FAQ</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#hra" data-i18n="nav_game">Hra</a>
+      <div class="langs langs-mobile">
+        <button data-lang="sk">SK</button><span>|</span>
+        <button data-lang="en">EN</button><span>|</span>
+        <button data-lang="it">IT</button>
+      </div>
+    </nav>
+
+    <div class="langs langs-desktop">
+      <button data-lang="sk">SK</button><span>|</span>
+      <button data-lang="en">EN</button><span>|</span>
+      <button data-lang="it">IT</button>
+    </div>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Otvoriť menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============ 1. HERO ============ -->
+    <section class="section hero" id="home">
+
+      <!-- Veľké iniciály -->
+      <div class="hero-initials" aria-hidden="true">
+        <span class="hi-z">Z</span>
+        <span class="hi-amp">&amp;</span>
+        <span class="hi-v">V</span>
+      </div>
+
+      <!-- Zlatý deliaci prvok -->
+      <div class="hero-divider">
+        <span class="hd-line"></span>
+        <span class="hd-heart">&#9829;</span>
+        <span class="hd-line"></span>
+      </div>
+
+      <p class="hero-date" data-i18n="hero_date">19. SEPTEMBER 2026</p>
+      <p class="hero-place">Rimini, Italy</p>
+
+      <p class="hero-note" data-i18n="hero_note">
+        Pripravte sa na víkend plný mora, talianskej atmosféry a spoločných chvíľ, na ktoré budeme dlho spomínať.
+      </p>
+
+    </section>
+
+    <!-- ============ 2. MIESTA SVADBY ============ -->
+    <section class="section places-section" id="miesta">
+      <div class="section-head places-head">
+        <h2 data-i18n="sec_places">Miesta svadby</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="places-row">
+        <article class="place-card">
+          <img class="church-img" src="assets/chiesa-san-fortunato.png" alt="Ilustrácia kostola Chiesa di San Fortunato">
+          <div class="place-info">
+            <h3 data-i18n="place_ceremony">Obrad</h3>
+            <strong>Chiesa di San Fortunato</strong>
+            <p>Via Covignano 257, Rimini</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Chiesa%20di%20San%20Fortunato%20Via%20Covignano%20257%20Rimini" target="_blank" rel="noopener" data-i18n="btn_maps">Otvoriť v Google Maps</a>
+          </div>
+        </article>
+
+        <div class="places-divider"></div>
+
+        <article class="place-card">
+          <img class="venue-img" src="assets/tenuta-mara-oslava.png" alt="Ilustrácia miesta oslavy Tenuta Mara">
+          <div class="place-info">
+            <h3 data-i18n="place_party">Oslava</h3>
+            <strong>Tenuta Mara</strong>
+            <p>Via Cà Bacchino 1665, San Clemente (RN)</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Tenuta%20Mara%20Via%20Ca%20Bacchino%201665%20San%20Clemente%20RN" target="_blank" rel="noopener" data-i18n="btn_maps">Otvoriť v Google Maps</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 3. PROGRAM + CESTOVANIE ============ -->
+    <section class="section split" id="program">
+      <img class="edge-flower edge-flower-program-left" src="assets/side-flower-left-slim.png" alt="" aria-hidden="true">
+      <img class="edge-flower edge-flower-program-right" src="assets/side-flower-right.png" alt="" aria-hidden="true">
+
+      <div class="panel timeline-panel">
+        <h2 data-i18n="sec_program">Program</h2>
+        <div class="divider"></div>
+
+        <div class="timeline">
+          <div class="time">15:00</div><div class="line-dot"></div><svg><use href="#icon-rings"></use></svg><p data-i18n="prog_arrival">Príchod hostí do kostola</p>
+          <div class="time">16:00</div><div class="line-dot"></div><span class="church-mini">✦</span><p data-i18n="prog_ceremony">Svadobný obrad</p>
+          <div class="time">18:30</div><div class="line-dot"></div><svg><use href="#icon-dinner"></use></svg><p data-i18n="prog_dinner">Večera</p>
+          <div class="time">21:00</div><div class="line-dot"></div><svg><use href="#icon-music"></use></svg><p data-i18n="prog_dance">Prvý tanec</p>
+          <div class="time">22:00</div><div class="line-dot"></div><svg><use href="#icon-party"></use></svg><p data-i18n="prog_party">Party</p>
+        </div>
+      </div>
+
+      <div class="panel travel-panel" id="travel">
+        <h2 data-i18n="sec_travel">Cestovanie a ubytovanie</h2>
+        <div class="divider"></div>
+        <p class="travel-intro" data-i18n="travel_desc">Tu nájdete všetky praktické informácie o ceste do Rimini a ubytovaní počas svadobného víkendu.</p>
+
+        <div class="accordion travel-vertical">
+          <details>
+            <summary><svg><use href="#icon-pin"></use></svg> <span data-i18n="travel_how">Ako sa dostať do Rimini</span></summary>
+            <p data-i18n="travel_how_desc">Sem doplníme odporúčané trasy autom, vlakom alebo autobusom.</p>
+          </details>
+          <details>
+            <summary><svg><use href="#icon-plane"></use></svg> <span data-i18n="travel_airports">Letiská v okolí</span></summary>
+            <p data-i18n="travel_airports_desc">Najbližšie možnosti: Rimini, Bologna, Ancona alebo Benátky.</p>
+          </details>
+          <details>
+            <summary><svg><use href="#icon-hotel"></use></svg> <span data-i18n="travel_hotels">Odporúčané ubytovanie</span></summary>
+            <p data-i18n="travel_hotels_desc">Sem vložíme hotely alebo apartmány, ktoré sú blízko miesta oslavy.</p>
+          </details>
+          <details>
+            <summary><svg><use href="#icon-bus"></use></svg> <span data-i18n="travel_transport">Doprava po meste</span></summary>
+            <p data-i18n="travel_transport_desc">Informácie o MHD, taxíkoch a presunoch medzi obradom a hostinou.</p>
+          </details>
+          <details>
+            <summary><svg><use href="#icon-car"></use></svg> <span data-i18n="travel_parking">Parkovanie</span></summary>
+            <p data-i18n="travel_parking_desc">Sem doplníme, kde môžu hostia zaparkovať.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ 4. TIPY ============ -->
+    <section class="section tips" id="tipy">
+      <img class="edge-flower edge-flower-tips-left" src="assets/side-flower-left-full.png" alt="" aria-hidden="true">
+      <img class="tips-mobile-garland" src="assets/tips-mobile-garland.png" alt="" aria-hidden="true">
+
+      <div class="section-head">
+        <h2 data-i18n="sec_tips">Tipy od nás</h2>
+      </div>
+
+      <div class="tips-grid">
+        <article class="tip-card">
+          <img class="tip-icon" src="assets/coffe.png" alt="Kaviareň">
+          <span data-i18n="tip_cafe">Kaviareň</span>
+          <div class="tip-text">
+            <h3>La Marianna</h3>
+            <p>Via IV Novembre 35, Rimini RN</p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=La%20Marianna%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card">
+          <img class="tip-icon" src="assets/plate.png" alt="Reštaurácia">
+          <span data-i18n="tip_restaurant">Reštaurácia</span>
+          <div class="tip-text">
+            <h3>Osteria del Mare</h3>
+            <p>Via Destra del Porto 41, Rimini RN</p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Osteria%20del%20Mare%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card">
+          <img class="tip-icon" src="assets/sun.png" alt="Pláž">
+          <span data-i18n="tip_beach">Pláž</span>
+          <div class="tip-text">
+            <h3>Bagno 26</h3>
+            <p>Lungomare Murri 26, Rimini RN</p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Bagno%2026%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card">
+          <img class="tip-icon" src="assets/tree.png" alt="Výhľad">
+          <span data-i18n="tip_view">Výhľad</span>
+          <div class="tip-text">
+            <h3>Castel Sismondo</h3>
+            <p>Piazza Malatesta, Rimini RN</p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Castel%20Sismondo%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card">
+          <img class="tip-icon" src="assets/shopping.png" alt="Nákupy">
+          <span data-i18n="tip_shopping">Nákupy</span>
+          <div class="tip-text">
+            <h3>Corso d'Augusto</h3>
+            <p>Corso d'Augusto, Rimini RN</p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Corso%20d%27Augusto%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 5. INFO BLOKY ============ -->
+    <section class="section info-grid info-grid-refined" id="info">
+      <article class="panel mini-panel info-card dresscode-panel">
+        <h2>Dress Code</h2>
+        <div class="divider"></div>
+        <div class="info-card-body dresscode-content">
+          <svg class="big-icon"><use href="#icon-dress"></use></svg>
+          <p class="info-card-label dresscode-label">Elegant / Summer Wedding</p>
+          <p class="info-card-text dresscode-desc" lang="sk">Radi vás uvidíme v elegantnom letnom oblečení. Vhodné sú jemné, prírodné a zemité tóny.</p>
+          <p class="info-card-text dresscode-desc" lang="en" style="display:none">We would love to see you in elegant summer outfits. Soft, natural and earthy tones are welcome.</p>
+          <p class="info-card-text dresscode-desc" lang="it" style="display:none">Vi aspettiamo con abiti estivi eleganti. Sono benvenuti toni delicati, naturali e terrosi.</p>
+          <p class="info-card-note dresscode-note" lang="sk">Dámy, prosíme bez bielej. Tá patrí neveste.</p>
+          <p class="info-card-note dresscode-note" lang="en" style="display:none">Ladies, please avoid white. This colour belongs to the bride.</p>
+          <p class="info-card-note dresscode-note" lang="it" style="display:none">Signore, vi chiediamo di evitare il bianco. Questo colore appartiene alla sposa.</p>
+        </div>
+      </article>
+
+      <article class="panel mini-panel info-card gift-panel">
+        <h2 data-i18n="sec_gift">Svadobný dar</h2>
+        <div class="divider"></div>
+        <div class="info-card-body">
+          <svg class="big-icon"><use href="#icon-gift"></use></svg>
+          <p class="info-card-text" data-i18n="gift_text">Vaša prítomnosť je pre nás najväčším darom. Ak by ste nás však chceli potešiť svadobným príspevkom, budeme veľmi vďační.</p>
+          <p class="info-card-label iban-label">IBAN</p>
+          <div class="iban" id="iban">SK12 0000 0000 0000 0000 0000</div>
+          <button class="btn" id="copyIban" data-i18n="btn_copy_iban">Skopírovať IBAN</button>
+        </div>
+      </article>
+
+      <article class="panel mini-panel info-card contact-panel">
+        <h2 data-i18n="sec_contacts">Kontakty</h2>
+        <div class="divider"></div>
+        <div class="info-card-body contacts-list">
+          <svg class="big-icon"><use href="#icon-phone"></use></svg>
+          <div class="contact">
+            <h3>Zuzana</h3>
+            <p>+421 911 123 456</p>
+            <div class="contact-actions">
+              <a class="btn small-btn" href="tel:+421911123456" data-i18n="btn_call">Zavolať</a>
+              <a class="btn ghost small-btn" href="https://wa.me/421911123456" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+          <div class="contact">
+            <h3>Valerio</h3>
+            <p>+421 654 321 987</p>
+            <div class="contact-actions">
+              <a class="btn small-btn" href="tel:+421654321987" data-i18n="btn_call">Zavolať</a>
+              <a class="btn ghost small-btn" href="https://wa.me/421654321987" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel mini-panel info-card rsvp-inline-panel" id="rsvp">
+        <h2 data-i18n="rsvp_inline_title">RSVP</h2>
+        <div class="divider"></div>
+        <div class="info-card-body">
+          <svg class="big-icon rsvp-inline-icon"><use href="#icon-envelope"></use></svg>
+          <p class="info-card-label rsvp-inline-lead" data-i18n="rsvp_inline_lead">Vyplňte nám, prosím, formulár.</p>
+          <p class="info-card-text rsvp-inline-desc" data-i18n="rsvp_inline_desc">Vo formulári nám potvrdíte účasť, prípadné alergie a ďalšie dôležité informácie.</p>
+          <div class="rsvp-inline-date">
+            <span data-i18n="rsvp_inline_until">Prosíme vyplniť do</span>
+            <strong>30. 6. 2026</strong>
+          </div>
+          <a class="rsvp-inline-btn" href="https://forms.gle/your-form-link" target="_blank" rel="noopener">
+            <span data-i18n="rsvp_inline_btn">Vyplniť RSVP</span>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ 6. FAQ ============ -->
+    <section class="section faq-section" id="faq">
+      <div class="faq-inner">
+        <div class="faq-header">
+          <span class="section-eyebrow">Máte otázky?</span>
+          <h2>Všetko, čo potrebujete vedieť</h2>
+          <div class="gold-rule"><span>✦</span></div>
+        </div>
+        <div class="faq-columns">
+          <div class="faq-col">
+            <details class="faq-item">
+              <summary><span class="faq-q">Bude zabezpečená doprava?</span><span class="faq-icon">+</span></summary>
+              <p>Informácie o doprave doplníme čoskoro.</p>
+            </details>
+            <details class="faq-item">
+              <summary><span class="faq-q">Bude obrad aj hostina na tom istom mieste?</span><span class="faq-icon">+</span></summary>
+              <p>Nie — obrad prebehne v kostole Chiesa di San Fortunato, oslava na Tenuta Mara.</p>
+            </details>
+            <details class="faq-item">
+              <summary><span class="faq-q">Bude svadba vnútri alebo vonku?</span><span class="faq-icon">+</span></summary>
+              <p>Obrad prebehne v kostole, oslava je plánovaná vonku v areáli Tenuta Mara.</p>
+            </details>
+            <details class="faq-item">
+              <summary><span class="faq-q">Môžeme prísť s deťmi?</span><span class="faq-icon">+</span></summary>
+              <p>Informáciu doplníme podľa finálneho plánu.</p>
+            </details>
+          </div>
+          <div class="faq-col">
+            <details class="faq-item">
+              <summary><span class="faq-q">Je dress code aj na welcome dinner?</span><span class="faq-icon">+</span></summary>
+              <p>Dress code bude upresnený pre každú udalosť zvlášť.</p>
+            </details>
+            <details class="faq-item">
+              <summary><span class="faq-q">Môžem počas obradu fotiť?</span><span class="faq-icon">+</span></summary>
+              <p>Prosíme, počas obradu nefotografujte a nechajte túto chvíľu na nášho fotografa.</p>
+            </details>
+            <details class="faq-item">
+              <summary><span class="faq-q">Máme si požičať auto?</span><span class="faq-icon">+</span></summary>
+              <p>Odporúčame mať vlastnú dopravu, no detaily doplníme neskôr.</p>
+            </details>
+            <details class="faq-item">
+              <summary><span class="faq-q">Bude po oslave zabezpečená doprava?</span><span class="faq-icon">+</span></summary>
+              <p>Informácie o doprave po oslave doplníme čoskoro.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ 6b. POČASIE ============ -->
+    <section class="section weather-section" id="pocasie">
+      <img class="edge-flower edge-flower-weather-right-new" src="assets/weather-flower-right.png" alt="" aria-hidden="true">
+      <div class="weather-shell">
+        <div class="weather-header">
+          <span class="section-eyebrow" data-i18n="weather_eyebrow">Svadobný víkend</span>
+          <h2 data-i18n="weather_title">Počasie v Rimini</h2>
+          <div class="gold-rule"><span>☼</span></div>
+        </div>
+
+        <div class="weather-layout">
+          <article class="weather-main-card">
+            <div class="weather-main-top">
+              <div>
+                <span class="weather-small" data-i18n="weather_wedding_day">Svadobný deň</span>
+                <h3 data-i18n="weather_date_19_main">19. september</h3>
+              </div>
+              <div class="weather-sun" aria-hidden="true">☀</div>
+            </div>
+
+            <div class="weather-main-temp">26°</div>
+            <p class="weather-main-desc" data-i18n="weather_wedding_desc">Slnečno a príjemne teplo</p>
+
+            <div class="weather-details">
+              <div>
+                <span data-i18n="weather_daytime">Cez deň</span>
+                <strong>24–27°</strong>
+              </div>
+              <div>
+                <span data-i18n="weather_evening">Večer</span>
+                <strong>19–21°</strong>
+              </div>
+            </div>
+          </article>
+
+          <div class="weather-side-cards">
+            <article class="weather-mini-card">
+              <span class="weather-date" data-i18n="weather_date_17">17. 9. · štvrtok</span>
+              <span class="weather-mini-icon">⛅</span>
+              <strong>25°</strong>
+              <p data-i18n="weather_cloudy">Polojasno</p>
+            </article>
+
+            <article class="weather-mini-card">
+              <span class="weather-date" data-i18n="weather_date_18">18. 9. · piatok</span>
+              <span class="weather-mini-icon">☀</span>
+              <strong>26°</strong>
+              <p data-i18n="weather_sunny">Slnečno</p>
+            </article>
+
+            <article class="weather-mini-card">
+              <span class="weather-date" data-i18n="weather_date_20">20. 9. · nedeľa</span>
+              <span class="weather-mini-icon">☀</span>
+              <strong>25°</strong>
+              <p data-i18n="weather_warm">Teplý deň</p>
+            </article>
+          </div>
+        </div>
+
+        <p class="weather-note" data-i18n="weather_note">Presnú predpoveď doplníme bližšie k svadbe.</p>
+      </div>
+    </section>
+
+    <!-- ============ 8. HRA ============ -->
+    <section class="section game-section" id="hra">
+      <div class="game-inner">
+        <div class="game-badge">MINI HRA</div>
+        <h2 class="game-title">Chceš vyhrať cenu?</h2>
+        <p class="game-desc">Zbaľ kufor, preži cestu na letisko a doraz do Rimini.<br>Najlepší cestujúci vyhrajú tanec s novomanželmi.</p>
+        <div class="game-cards-row">
+          <div class="game-card">🧳<span>Zbaľ kufor</span></div>
+          <div class="game-arrow">→</div>
+          <div class="game-card">✈️<span>Leť do Rimini</span></div>
+          <div class="game-arrow">→</div>
+          <div class="game-card">💃<span>Vyhraj tanec</span></div>
+        </div>
+        <a class="btn game-btn" href="#" target="_blank" rel="noopener">Zahrať si hru</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span data-i18n="footer_text">Tešíme sa na krásne chvíle s vami v Taliansku!</span>
+  </footer>
+
+  <script src="script.js"></script>
+  </div>
+</body>
+</html>
