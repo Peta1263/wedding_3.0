@@ -1059,3 +1059,26 @@ body.game-page-body::after {
 
 .nav-wrap { display: contents; }
 #beginJourneyBtn { align-self: center; margin-top: 8px; }
+
+/* Oprava kufra v bezpečnostnej kontrole */
+.scanner-belt {
+  position: relative !important;
+}
+
+.scanner-suitcase {
+  position: absolute !important;
+  left: calc(50% - 78px) !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 3 !important;
+}
+
+.scanner-suitcase.move {
+  transform: translate(53px, -50%) !important;
+}
+
+.scanner-gate {
+  margin-left: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
