@@ -745,75 +745,59 @@ body.game-page-body {
 .final-scene {
   border-radius: 24px;
   overflow: hidden;
-  min-height: 430px;
+  background: linear-gradient(135deg, #344124 0%, #4d5f35 50%, #344124 100%);
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url("images/couple.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 18px 42px rgba(60, 47, 29, 0.14);
 }
 
 .final-scene::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(20, 24, 18, 0.38), rgba(20, 24, 18, 0.50)),
-    radial-gradient(ellipse at 50% 25%, rgba(255, 252, 246, 0.18), transparent 58%);
+  background: radial-gradient(ellipse at 50% 0%, rgba(184,138,56,0.25), transparent 60%);
 }
 
 .final-overlay {
   text-align: center;
-  padding: 52px 46px;
+  padding: 60px 48px;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  width: min(92%, 720px);
-  border: 1px solid rgba(255, 252, 246, 0.34);
-  border-radius: 24px;
-  background: rgba(255, 252, 246, 0.18);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  box-shadow: 0 18px 45px rgba(0,0,0,.14);
 }
 
 .final-overlay .game-kicker {
-  color: #f3d08e;
+  color: rgba(184, 138, 56, 0.9);
   letter-spacing: 0.28em;
 }
 
 .final-title {
   font-family: "Great Vibes", cursive;
-  font-size: clamp(48px, 7vw, 82px);
+  font-size: clamp(48px, 7vw, 80px);
   color: #fffaf2;
   margin: 0;
   line-height: 1.1;
-  text-shadow: 0 3px 18px rgba(0,0,0,.30);
 }
 
 .final-text {
   font-family: "Cormorant Garamond", serif;
-  font-size: 22px;
+  font-size: 20px;
   font-style: italic;
-  color: rgba(255,250,242,0.92);
+  color: rgba(255,250,242,0.80);
   margin: 0;
-  text-shadow: 0 2px 12px rgba(0,0,0,.28);
 }
 
 .final-reward {
   font-family: "Cormorant Garamond", serif;
-  font-size: 20px;
-  color: #f3d08e;
+  font-size: 18px;
+  color: var(--gold);
   margin: 0;
   letter-spacing: 0.05em;
-  text-shadow: 0 2px 12px rgba(0,0,0,.28);
 }
 
 .game-win-actions {
@@ -821,28 +805,28 @@ body.game-page-body {
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .game-win-actions .play-btn {
-  background: rgba(255,252,246,0.20);
-  border: 1px solid rgba(255,252,246,0.48);
+  background: rgba(255,252,246,0.15);
+  border: 1px solid rgba(255,252,246,0.40);
   color: #fffaf2;
   box-shadow: none;
 }
 
 .game-win-actions .play-btn:hover {
-  background: rgba(255,252,246,0.30);
+  background: rgba(255,252,246,0.25);
 }
 
 .game-win-actions .secondary-btn {
-  border-color: rgba(255,252,246,0.48);
-  color: rgba(255,252,246,0.92);
+  border-color: rgba(255,252,246,0.35);
+  color: rgba(255,252,246,0.80);
 }
 
 .game-win-actions .secondary-btn:hover {
-  background: rgba(255,252,246,0.14);
-  border-color: rgba(255,252,246,0.65);
+  background: rgba(255,252,246,0.12);
+  border-color: rgba(255,252,246,0.55);
   color: #fffaf2;
 }
 

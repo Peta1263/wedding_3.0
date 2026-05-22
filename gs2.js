@@ -884,286 +884,79 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!prizeWindow) return;
 
         const prize = TEXTS[currentLang].prize;
-        const safeName = String(playerName || "")
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/\"/g, "&quot;")
-            .replace(/'/g, "&#039;");
 
         prizeWindow.document.write(`
             <!DOCTYPE html>
             <html lang="${prize.lang}">
             <head>
                 <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${prize.title}</title>
-                <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
                 <style>
-                    * { box-sizing: border-box; }
-
-                    html, body {
-                        margin: 0;
-                        width: 100%;
-                        min-height: 100%;
-                        font-family: "Cormorant Garamond", Georgia, serif;
-                        color: #fffaf2;
-                        background: #211f1a;
-                    }
-
                     body {
+                        margin: 0;
                         min-height: 100vh;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        padding: 28px;
+                        background: #f7f3ee;
+                        font-family: Georgia, serif;
+                        color: #2f2f2f;
                     }
-
-                    .page {
-                        width: min(1120px, 100%);
-                        min-height: 660px;
-                        position: relative;
-                        overflow: hidden;
-                        border-radius: 34px;
-                        box-shadow: 0 26px 70px rgba(41, 32, 22, .28);
-                        border: 1px solid rgba(255, 252, 246, .28);
-                    }
-
-                    .bg-photo {
-                        position: absolute;
-                        inset: 0;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        z-index: 0;
-                    }
-
-                    .shade {
-                        position: absolute;
-                        inset: 0;
-                        z-index: 1;
-                        background:
-                            linear-gradient(180deg, rgba(19, 22, 16, .46), rgba(19, 22, 16, .62)),
-                            radial-gradient(ellipse at 50% 28%, rgba(255, 252, 246, .26), transparent 60%);
-                    }
-
-                    .certificate {
-                        position: absolute;
-                        inset: 42px;
-                        z-index: 2;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        text-align: center;
-                        padding: 58px 72px;
-                        border: 1px solid rgba(255, 252, 246, .42);
+                    .card {
+                        width: 850px;
+                        max-width: 92%;
+                        background: #fff;
+                        border: 1px solid #ddd2c7;
                         border-radius: 28px;
-                        background: rgba(255, 252, 246, .13);
-                        backdrop-filter: blur(4px);
-                        -webkit-backdrop-filter: blur(4px);
+                        padding: 56px;
+                        box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+                        text-align: center;
                     }
-
-                    .certificate::before {
-                        content: "";
-                        position: absolute;
-                        inset: 16px;
-                        border: 1px solid rgba(255, 252, 246, .25);
-                        border-radius: 20px;
-                        pointer-events: none;
-                    }
-
-                    .inner {
-                        position: relative;
-                        z-index: 3;
-                        max-width: 760px;
-                    }
-
                     .kicker {
-                        margin: 0 0 16px;
-                        font-family: "Inter", Arial, sans-serif;
-                        font-size: 13px;
-                        font-weight: 800;
-                        letter-spacing: .30em;
+                        margin: 0 0 10px;
+                        letter-spacing: 0.16em;
                         text-transform: uppercase;
-                        color: #f3d08e;
-                    }
-
-                    .brand {
-                        margin: 0 0 18px;
-                        font-size: 28px;
-                        font-weight: 600;
-                        letter-spacing: .10em;
-                        color: rgba(255, 250, 242, .92);
-                    }
-
-                    .brand span,
-                    .divider span {
-                        color: #f3d08e;
-                    }
-
-                    h1 {
-                        margin: 0;
-                        font-size: clamp(46px, 6vw, 74px);
-                        font-weight: 600;
-                        line-height: 1.04;
-                        letter-spacing: .015em;
-                        color: #fffaf2;
-                        text-shadow: 0 4px 20px rgba(0,0,0,.32);
-                    }
-
-                    .divider {
-                        width: 180px;
-                        height: 22px;
-                        margin: 26px auto 18px;
-                        position: relative;
-                    }
-
-                    .divider::before,
-                    .divider::after {
-                        content: "";
-                        position: absolute;
-                        top: 11px;
-                        width: 72px;
-                        height: 1px;
-                        background: rgba(243, 208, 142, .76);
-                    }
-
-                    .divider::before { left: 0; }
-                    .divider::after { right: 0; }
-
-                    .divider span {
-                        display: inline-block;
-                        font-size: 18px;
-                        line-height: 22px;
-                    }
-
-                    .name {
-                        margin: 6px 0 20px;
-                        font-family: "Great Vibes", cursive;
-                        font-size: clamp(50px, 6.5vw, 82px);
-                        color: #fffaf2;
-                        line-height: 1.02;
-                        text-shadow: 0 4px 22px rgba(0,0,0,.34);
-                    }
-
-                    .destination {
-                        margin: 0 auto 12px;
-                        font-size: 28px;
-                        color: rgba(255, 250, 242, .92);
-                    }
-
-                    .reward {
-                        display: inline-block;
-                        margin: 18px 0 8px;
-                        padding: 14px 32px;
-                        border: 1px solid rgba(243, 208, 142, .62);
-                        border-radius: 999px;
-                        background: rgba(255, 252, 246, .16);
-                        font-family: "Inter", Arial, sans-serif;
+                        color: #8a827b;
                         font-size: 14px;
-                        font-weight: 800;
-                        letter-spacing: .14em;
-                        text-transform: uppercase;
-                        color: #fffaf2;
                     }
-
+                    h1 {
+                        margin: 0 0 18px;
+                        font-size: 52px;
+                        font-weight: 500;
+                    }
+                    .name {
+                        font-size: 38px;
+                        margin: 18px 0;
+                        color: #7f9788;
+                        font-weight: 700;
+                    }
+                    .reward {
+                        font-size: 28px;
+                        margin: 20px 0 8px;
+                    }
+                    .meta {
+                        font-size: 22px;
+                        margin: 8px 0;
+                    }
                     .footer {
-                        margin: 26px 0 0;
-                        font-size: 24px;
-                        font-style: italic;
-                        color: rgba(255, 250, 242, .84);
-                    }
-
-                    .date {
-                        margin: 26px 0 0;
-                        font-family: "Inter", Arial, sans-serif;
-                        font-size: 11px;
-                        font-weight: 800;
-                        letter-spacing: .26em;
-                        text-transform: uppercase;
-                        color: #f3d08e;
-                    }
-
-                    .print-note {
-                        position: fixed;
-                        left: 18px;
-                        bottom: 14px;
-                        z-index: 5;
-                        font-family: "Inter", Arial, sans-serif;
-                        font-size: 11px;
-                        color: rgba(255, 250, 242, .70);
-                    }
-
-                    @media print {
-                        @page {
-                            size: A4 landscape;
-                            margin: 0;
-                        }
-
-                        html, body {
-                            width: 297mm;
-                            height: 210mm;
-                            min-height: 210mm;
-                            background: #211f1a !important;
-                            -webkit-print-color-adjust: exact;
-                            print-color-adjust: exact;
-                        }
-
-                        body {
-                            padding: 0;
-                            display: block;
-                        }
-
-                        .page {
-                            width: 297mm;
-                            height: 210mm;
-                            min-height: 0;
-                            border-radius: 0;
-                            border: none;
-                            box-shadow: none;
-                        }
-
-                        .certificate {
-                            inset: 13mm;
-                            border-radius: 9mm;
-                            padding: 18mm 25mm;
-                        }
-
-                        .certificate::before {
-                            inset: 5mm;
-                            border-radius: 7mm;
-                        }
-
-                        .print-note {
-                            display: none;
-                        }
+                        margin-top: 30px;
+                        color: #8a827b;
+                        font-size: 20px;
                     }
                 </style>
             </head>
             <body>
-                <main class="page">
-                    <img class="bg-photo" src="images/couple.png" alt="">
-                    <div class="shade"></div>
-                    <section class="certificate">
-                        <div class="inner">
-                            <p class="kicker">${prize.kicker}</p>
-                            <p class="brand">Zuzana <span>&amp;</span> Valerio</p>
-                            <h1>${prize.title}</h1>
-                            <div class="divider"><span>♡</span></div>
-                            <div class="name">${safeName}</div>
-                            <p class="destination">${prize.destination}</p>
-                            <p class="reward">${prize.reward}</p>
-                            <p class="footer">${prize.footer}</p>
-                            <p class="date">Rimini · 19. 09. 2026</p>
-                        </div>
-                    </section>
-                </main>
-                <div class="print-note">Pri ukladaní ako PDF nechaj orientáciu na šírku.</div>
+                <div class="card">
+                    <p class="kicker">${prize.kicker}</p>
+                    <h1>${prize.title}</h1>
+                    <div class="name">${playerName}</div>
+                    <p class="reward">${prize.reward}</p>
+                    <p class="meta">${prize.destination}</p>
+                    <p class="footer">${prize.footer}</p>
+                </div>
                 <script>
                     window.onload = function() {
-                        setTimeout(function() { window.print(); }, 350);
+                        window.print();
                     };
                 <\/script>
             </body>
