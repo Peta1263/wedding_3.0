@@ -693,7 +693,7 @@ body.game-page-body {
 }
 
 .scanner-suitcase.move {
-  transform: translateX(80px);
+  transform: translateX(64px) !important;
 }
 
 .scanner-gate {
