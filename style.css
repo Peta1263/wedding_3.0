@@ -5891,3 +5891,10 @@ footer {
     letter-spacing: .12em !important;
   }
 }
+
+
+
+
+.hero-divider {
+  gap: 0 !important;
+}
