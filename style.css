@@ -2334,7 +2334,7 @@ footer {
 }
 
 .weather-note {
-  margin-top: 10px !important;
+  margin-top: 24px !important;
   font-size: 13px !important;
 }
 
@@ -5532,3 +5532,362 @@ footer {
   }
 }
 
+
+
+/* =========================================================
+   FINÁLNE ÚPRAVY: desktop mená, hra, tipy a tlačidlá mapy
+   ========================================================= */
+.hero-names-desktop {
+  display: block !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: clamp(86px, 8.2vw, 150px) !important;
+  font-weight: 500 !important;
+  line-height: .92 !important;
+  letter-spacing: .01em !important;
+  color: var(--olive-dark) !important;
+  margin: 18px auto 22px !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+.hero-names-desktop span {
+  color: var(--gold) !important;
+  font-weight: 400 !important;
+}
+
+@media (min-width: 901px) {
+  .hero .hero-initials {
+    display: none !important;
+  }
+}
+
+/* Nadpis hry rovnakým štýlom ako nadpisy sekcií, nie písaným fontom */
+.game-title {
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: clamp(28px, 3.5vw, 52px) !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+  color: var(--olive-dark) !important;
+  margin: 0 0 18px !important;
+}
+
+/* Skrytie starých kartičiek hry, keby zostali v cache alebo v inom HTML */
+.game-cards-row,
+.game-arrow,
+.game-card {
+  display: none !important;
+}
+
+.game-desc {
+  margin-bottom: 28px !important;
+}
+
+/* Tlačidlá Otvoriť mapu v Tipy od nás – zelené ako Otvoriť v Google Maps */
+.tip-card .tip-btn,
+.tip-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-width: 154px !important;
+  height: 40px !important;
+  margin: 12px auto 0 !important;
+  padding: 0 18px !important;
+  border: 1px solid var(--olive) !important;
+  border-radius: 8px !important;
+  background: var(--olive) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  letter-spacing: .07em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.tip-card .tip-btn span,
+.tip-btn span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: 1 !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+  white-space: nowrap !important;
+}
+
+.tip-card .tip-btn svg,
+.tip-btn svg {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  flex: 0 0 14px !important;
+  display: block !important;
+  margin: 0 !important;
+  stroke: currentColor !important;
+  transform: none !important;
+}
+
+.tip-card .tip-btn:hover,
+.tip-btn:hover {
+  background: var(--olive-dark) !important;
+  border-color: var(--olive-dark) !important;
+  color: #fff !important;
+  transform: none !important;
+}
+
+@media (max-width: 900px) {
+  .hero-names-desktop {
+    display: none !important;
+  }
+
+  .hero .hero-initials {
+    display: flex !important;
+  }
+
+  /* posúva sa iba veta Pripravte sa... */
+  .hero-note {
+    margin-top: 108px !important;
+  }
+
+  /* Tipy od nás iba na mobile: 2 vedľa seba, notebook ostáva pôvodný */
+  #tipy .tips-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  #tipy .tip-card {
+    min-width: 0 !important;
+    padding: 18px 8px 16px !important;
+  }
+
+  #tipy .tip-card .tip-icon,
+  #tipy .tip-card img.tip-icon {
+    width: 112px !important;
+    height: 112px !important;
+    margin: -12px auto 0 !important;
+  }
+
+  #tipy .tip-card > span {
+    font-size: 11px !important;
+    letter-spacing: .08em !important;
+    margin-top: -6px !important;
+    margin-bottom: 18px !important;
+  }
+
+  #tipy .tip-card h3 {
+    font-size: 21px !important;
+  }
+
+  #tipy .tip-card p {
+    font-size: 10.5px !important;
+  }
+
+  #tipy .tip-card .tip-btn,
+  #tipy .tip-btn {
+    min-width: 128px !important;
+    height: 36px !important;
+    padding: 0 10px !important;
+    font-size: 8.5px !important;
+    letter-spacing: .045em !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-note {
+    margin-top: 124px !important;
+  }
+
+  #tipy .tips-grid {
+    gap: 10px !important;
+  }
+
+  #tipy .tip-card {
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+  }
+}
+
+
+/* =========================================================
+   FINÁLNA OPRAVA: desktop rozloženie Tipy + počasie bez Z&V
+   ========================================================= */
+
+/* odstránenie priehľadného Z&V z karty počasia */
+.weather-main-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+@media (min-width: 901px) {
+  /* Tipy od nás: po odstránení Nákupov sú 4 karty rovnomerne cez sekciu */
+  #tipy .tips-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 22px !important;
+    width: min(100%, 1120px) !important;
+    margin: 0 auto !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+  }
+
+  #tipy .tip-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Počasie v Rimini: obsah zarovnaný na stred, nie posunutý doľava */
+  #pocasie .weather-shell {
+    width: min(100%, 1120px) !important;
+    max-width: 1120px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  #pocasie .weather-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr) !important;
+    gap: 24px !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  #pocasie .weather-main-card,
+  #pocasie .weather-side-cards {
+    min-width: 0 !important;
+  }
+}
+
+/* =========================================================
+   FINÁLNA OPRAVA: na mobile bez dekoratívnych kvetov v sekciách
+   Netýka sa hero úvodných kvetov, iba kvetov v obsahu stránky.
+   ========================================================= */
+@media (max-width: 900px) {
+  #program .edge-flower,
+  #tipy .edge-flower,
+  #info .edge-flower,
+  #faq .edge-flower,
+  #pocasie .edge-flower,
+  .edge-flower-program-left,
+  .edge-flower-program-right,
+  .edge-flower-tips-left,
+  .edge-flower-info-right,
+  .edge-flower-weather-left,
+  .edge-flower-weather-right-new,
+  .tips-mobile-garland {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  #program,
+  #tipy,
+  #info,
+  #faq,
+  #pocasie {
+    overflow: hidden !important;
+  }
+
+  #tipy {
+    padding-top: 52px !important;
+  }
+}
+
+/* =========================================================
+   FINÁLNA OPRAVA: mobilný hero — väčšie Z&V a nižší úvodný text
+   Mení iba mobilnú verziu.
+   ========================================================= */
+@media (max-width: 900px) {
+  .hero .hi-z,
+  .hero .hi-v {
+    font-size: clamp(104px, 30vw, 138px) !important;
+    line-height: .82 !important;
+  }
+
+  .hero .hi-amp {
+    font-size: clamp(54px, 16vw, 76px) !important;
+    padding: 0 9px !important;
+    transform: translateY(6px) !important;
+  }
+
+  .hero-note {
+    margin-top: 160px !important;
+    width: min(82vw, 330px) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero .hi-z,
+  .hero .hi-v {
+    font-size: 102px !important;
+  }
+
+  .hero .hi-amp {
+    font-size: 58px !important;
+  }
+
+  .hero-note {
+    margin-top: 178px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    position: relative !important;
+  }
+
+  .hero-note {
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 120px !important;
+    transform: translateX(-50%) !important;
+
+    width: min(82vw, 310px) !important;
+    margin: 0 !important;
+    text-align: center !important;
+    z-index: 3 !important;
+  }
+}
+@media (max-width: 900px) {
+  .hero-initials,
+  .hero-divider,
+  .hero-date,
+  .hero-place {
+    transform: translateY(-30px) !important;
+  }
+}
+
+/* =========================================================
+   FOOTER — nenápadný podpis
+   ========================================================= */
+.footer-credit {
+  display: block !important;
+  margin-top: 30px !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  color: rgba(52, 65, 36, .42) !important;
+}
+
+@media (max-width: 900px) {
+  .footer-credit {
+    margin-top: 10px !important;
+    font-size: 8px !important;
+    letter-spacing: .12em !important;
+  }
+}

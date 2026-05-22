@@ -34,12 +34,14 @@ document.getElementById("copyIban")?.addEventListener("click", async () => {
    ========================================================= */
 const i18n = {
   sk: {
-    nav_home: "Home",
+    nav_home: "Domov",
     nav_program: "Program",
     nav_places: "Miesta",
-    nav_travel: "Travel",
+    nav_travel: "Cestovanie",
     nav_tips: "Tipy",
     nav_info: "Info",
+    nav_faq: "FAQ",
+    nav_rsvp: "RSVP",
     nav_game: "Hra",
 
     hero_date: "19. SEPTEMBER 2026",
@@ -138,6 +140,34 @@ const i18n = {
     quest_cert: "Po splnení všetkých úloh získate digitálny certifikát.",
 
     footer_text: "Tešíme sa na krásne chvíle s vami v Taliansku!",
+    footer_credit: "Vytvorili Peťka a Mirka Kakaščikové",
+
+    faq_eyebrow: "Máte otázky?",
+    faq_heading: "Všetko, čo potrebujete vedieť",
+    faq2_q1: "Bude zabezpečená doprava?",
+    faq2_a1: "Informácie o doprave doplníme čoskoro.",
+    faq2_q2: "Bude obrad aj hostina na tom istom mieste?",
+    faq2_a2: "Nie — obrad prebehne v kostole Chiesa di San Fortunato, oslava na Tenuta Mara.",
+    faq2_q3: "Bude svadba vnútri alebo vonku?",
+    faq2_a3: "Obrad prebehne v kostole, oslava je plánovaná vonku v areáli Tenuta Mara.",
+    faq2_q4: "Môžeme prísť s deťmi?",
+    faq2_a4: "Informáciu doplníme podľa finálneho plánu.",
+    faq2_q5: "Je dress code aj na welcome dinner?",
+    faq2_a5: "Dress code bude upresnený pre každú udalosť zvlášť.",
+    faq2_q6: "Môžem počas obradu fotiť?",
+    faq2_a6: "Prosíme, počas obradu nefotografujte a nechajte túto chvíľu na nášho fotografa.",
+    faq2_q7: "Máme si požičať auto?",
+    faq2_a7: "Odporúčame mať vlastnú dopravu, no detaily doplníme neskôr.",
+    faq2_q8: "Bude po oslave zabezpečená doprava?",
+    faq2_a8: "Informácie o doprave po oslave doplníme čoskoro.",
+
+    game_badge: "MINI HRA",
+    game_title: "Chceš vyhrať cenu?",
+    game_desc: "Zbaľ kufor, preži cestu na letisko a doraz do Rimini.\nNajlepší cestujúci vyhrajú tanec s novomanželmi.",
+    game_card1: "Zbaľ kufor",
+    game_card2: "Leť do Rimini",
+    game_card3: "Vyhraj tanec",
+    game_btn: "Zahrať si hru",
   },
 
   en: {
@@ -147,6 +177,8 @@ const i18n = {
     nav_travel: "Travel",
     nav_tips: "Tips",
     nav_info: "Info",
+    nav_faq: "FAQ",
+    nav_rsvp: "RSVP",
     nav_game: "Game",
 
     hero_date: "19th SEPTEMBER 2026",
@@ -245,15 +277,45 @@ const i18n = {
     quest_cert: "Complete all tasks to receive a digital certificate.",
 
     footer_text: "We look forward to beautiful moments with you in Italy!",
+    footer_credit: "Powered by Petra and Mirka Kakascikova´s",
+
+    faq_eyebrow: "Any questions?",
+    faq_heading: "Everything you need to know",
+    faq2_q1: "Will transport be arranged?",
+    faq2_a1: "We will add transport details soon.",
+    faq2_q2: "Will the ceremony and reception be at the same venue?",
+    faq2_a2: "No — the ceremony will be at Chiesa di San Fortunato, the reception at Tenuta Mara.",
+    faq2_q3: "Will the wedding be indoors or outdoors?",
+    faq2_a3: "The ceremony will be in the church; the reception is planned outdoors at Tenuta Mara.",
+    faq2_q4: "Can we bring children?",
+    faq2_a4: "We will confirm based on the final plan.",
+    faq2_q5: "Is there a dress code for the welcome dinner too?",
+    faq2_a5: "Dress code details will be specified separately for each event.",
+    faq2_q6: "Can I take photos during the ceremony?",
+    faq2_a6: "Please refrain from photographing during the ceremony and let our photographer capture those moments.",
+    faq2_q7: "Should we rent a car?",
+    faq2_a7: "We recommend having your own transport, but we will add details later.",
+    faq2_q8: "Will there be transport after the reception?",
+    faq2_a8: "We will add information about transport after the reception soon.",
+
+    game_badge: "MINI GAME",
+    game_title: "Want to win a prize?",
+    game_desc: "Pack your bag, survive the trip to the airport and make it to Rimini.\nThe best travellers will win a dance with the newlyweds.",
+    game_card1: "Pack your bag",
+    game_card2: "Fly to Rimini",
+    game_card3: "Win a dance",
+    game_btn: "Play the game",
   },
 
   it: {
-    nav_home: "Home",
+    nav_home: "Inizio",
     nav_program: "Programma",
     nav_places: "Luoghi",
     nav_travel: "Viaggio",
     nav_tips: "Consigli",
     nav_info: "Info",
+    nav_faq: "Domande",
+    nav_rsvp: "Conferma",
     nav_game: "Gioco",
 
     hero_date: "19 SETTEMBRE 2026",
@@ -352,10 +414,44 @@ const i18n = {
     quest_cert: "Completa tutti i compiti per ricevere un certificato digitale.",
 
     footer_text: "Non vediamo l'ora di condividere momenti meravigliosi con voi in Italia!",
+    footer_credit: "Realizzato da Petra e Mirka Kakascikova",
+
+    faq_eyebrow: "Avete domande?",
+    faq_heading: "Tutto quello che dovete sapere",
+    faq2_q1: "Sarà organizzato il trasporto?",
+    faq2_a1: "Aggiungeremo i dettagli sui trasporti a breve.",
+    faq2_q2: "La cerimonia e il ricevimento si terranno nello stesso posto?",
+    faq2_a2: "No — la cerimonia si terrà nella chiesa di San Fortunato, il ricevimento a Tenuta Mara.",
+    faq2_q3: "Il matrimonio sarà in interni o all'aperto?",
+    faq2_a3: "La cerimonia si terrà in chiesa; il ricevimento è previsto all'aperto nella tenuta Tenuta Mara.",
+    faq2_q4: "Possiamo portare bambini?",
+    faq2_a4: "Confermeremo in base al piano finale.",
+    faq2_q5: "C'è un dress code anche per la welcome dinner?",
+    faq2_a5: "Il dress code sarà specificato separatamente per ogni evento.",
+    faq2_q6: "Posso fotografare durante la cerimonia?",
+    faq2_a6: "Vi chiediamo di non fotografare durante la cerimonia e di lasciare questi momenti al nostro fotografo.",
+    faq2_q7: "Dobbiamo noleggiare un'auto?",
+    faq2_a7: "Consigliamo di avere un mezzo proprio, ma aggiungeremo i dettagli in seguito.",
+    faq2_q8: "Ci sarà un servizio di trasporto dopo il ricevimento?",
+    faq2_a8: "Aggiungeremo le informazioni sul trasporto post-ricevimento a breve.",
+
+    game_badge: "MINI GIOCO",
+    game_title: "Vuoi vincere un premio?",
+    game_desc: "Fai la valigia, sopravvivi al viaggio verso l'aeroporto e arriva a Rimini.\nI migliori viaggiatori vinceranno un ballo con gli sposi.",
+    game_card1: "Fai la valigia",
+    game_card2: "Vola a Rimini",
+    game_card3: "Vinci un ballo",
+    game_btn: "Gioca",
   }
 };
 
 let currentLang = "sk";
+
+const RSVP_LINKS = {
+  sk: "https://tally.so/r/A7bLrN",
+  en: "https://tally.so/r/ZjRa4a",
+  it: "https://tally.so/r/BzbkK4"
+};
 
 function applyLang(lang) {
   currentLang = lang;
@@ -363,6 +459,11 @@ function applyLang(lang) {
 
   const dict = i18n[lang];
   if (!dict) return;
+
+  const rsvpBtn = document.getElementById("rsvpBtn");
+  if (rsvpBtn && RSVP_LINKS[lang]) {
+    rsvpBtn.href = RSVP_LINKS[lang];
+  }
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");

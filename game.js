@@ -78,6 +78,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const TEXTS = {
         sk: {
+            ui: {
+                kicker: "INTERAKTÍVNA SVADOBNÁ CESTA",
+                title: "CESTA DO RIMINI",
+                subtitle: "Zbaľ kufor, zvládni cestu a doraz na svadbu.",
+                step1: "1. Balenie",
+                step2: "2. Cesta",
+                step3: "3. Letisko",
+                step4: "4. Príchod",
+                nameLabel: "Tvoje meno",
+                countryLabel: "Odkiaľ cestuješ",
+                introText: "Pred odchodom na svadbu si najprv priprav kufor.",
+                packTitle: "Zbaľ kufor",
+                packText: "Klikni na veci, ktoré chceš vložiť do kufra. Vyberaj pozorne – niektoré predmety cez kontrolu neprejdú.",
+                suitcase: "Kufor",
+                progress: "Postup",
+                delays: "Zrážky",
+                roadHint: "Potiahni po ploche hore/dole alebo použi tlačidlá.",
+                roadHelp: "Použi šípky ↑ ↓ alebo tlačidlá na zmenu pruhu a vyhni sa premávke.",
+                securityTitle: "Bezpečnostná kontrola",
+                securityDefault: "Tvoj kufor sa kontroluje.",
+                finalTitle: "Zvládol/a si to",
+                rewardText: "Tvoja výhra: tanec s novomanželmi",
+                backSite: "Späť na stránku",
+                countrySk: "Slovensko",
+                countryLu: "Luxembursko",
+                countryIt: "Taliansko"
+            },
             buttons: {
                 beginJourney: "Začať cestu",
                 finishPacking: "Dokončiť balenie",
@@ -138,6 +165,33 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         en: {
+            ui: {
+                kicker: "INTERACTIVE WEDDING JOURNEY",
+                title: "JOURNEY TO RIMINI",
+                subtitle: "Pack your bag, make the journey and arrive at the wedding.",
+                step1: "1. Pack",
+                step2: "2. Travel",
+                step3: "3. Airport",
+                step4: "4. Arrival",
+                nameLabel: "Your name",
+                countryLabel: "Where are you travelling from?",
+                introText: "Before leaving for the wedding, prepare your suitcase first.",
+                packTitle: "Pack your suitcase",
+                packText: "Click the items you want to add to your suitcase. Choose carefully – some items will not pass the security check.",
+                suitcase: "Suitcase",
+                progress: "Progress",
+                delays: "Traffic hits",
+                roadHint: "Swipe up/down on the canvas or use the buttons.",
+                roadHelp: "Use ↑ ↓ arrow keys or buttons to switch lanes and avoid traffic.",
+                securityTitle: "Airport security",
+                securityDefault: "Your suitcase is being checked.",
+                finalTitle: "You made it",
+                rewardText: "Your prize: a dance with the newlyweds",
+                backSite: "Back to website",
+                countrySk: "Slovakia",
+                countryLu: "Luxembourg",
+                countryIt: "Italy"
+            },
             buttons: {
                 beginJourney: "Start journey",
                 finishPacking: "Finish packing",
@@ -146,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 downloadPrize: "Download reward",
                 next: "Next",
                 continue: "Continue",
-                start: "Start"
+                start: "Avvia"
             },
             form: {
                 guestNamePlaceholder: "Enter your name"
@@ -198,6 +252,33 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
         it: {
+            ui: {
+                kicker: "VIAGGIO DI NOZZE INTERATTIVO",
+                title: "VIAGGIO A RIMINI",
+                subtitle: "Prepara la valigia, affronta il viaggio e arriva al matrimonio.",
+                step1: "1. Valigia",
+                step2: "2. Viaggio",
+                step3: "3. Aeroporto",
+                step4: "4. Arrivo",
+                nameLabel: "Il tuo nome",
+                countryLabel: "Da dove viaggi",
+                introText: "Prima di partire per il matrimonio, prepara la valigia.",
+                packTitle: "Prepara la valigia",
+                packText: "Clicca sugli oggetti che vuoi mettere in valigia. Scegli con attenzione: alcuni oggetti non passeranno il controllo.",
+                suitcase: "Valigia",
+                progress: "Avanzamento",
+                delays: "Urti",
+                roadHint: "Scorri su/giù sull’area di gioco o usa i pulsanti.",
+                roadHelp: "Usa le frecce ↑ ↓ o i pulsanti per cambiare corsia ed evitare il traffico.",
+                securityTitle: "Controllo di sicurezza",
+                securityDefault: "La tua valigia è in controllo.",
+                finalTitle: "Ce l’hai fatta",
+                rewardText: "Il tuo premio: un ballo con gli sposi",
+                backSite: "Torna al sito",
+                countrySk: "Slovacchia",
+                countryLu: "Lussemburgo",
+                countryIt: "Italia"
+            },
             buttons: {
                 beginJourney: "Inizia il viaggio",
                 finishPacking: "Finisci di preparare",
@@ -206,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 downloadPrize: "Scarica il premio",
                 next: "Avanti",
                 continue: "Continua",
-                start: "Start"
+                start: "Avvia"
             },
             form: {
                 guestNamePlaceholder: "Inserisci il tuo nome"
@@ -803,75 +884,234 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!prizeWindow) return;
 
         const prize = TEXTS[currentLang].prize;
+        const safeName = String(playerName || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
 
         prizeWindow.document.write(`
             <!DOCTYPE html>
             <html lang="${prize.lang}">
             <head>
                 <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>${prize.title}</title>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
                 <style>
+                    * {
+                        box-sizing: border-box;
+                    }
+
                     body {
                         margin: 0;
                         min-height: 100vh;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        background: #f7f3ee;
-                        font-family: Georgia, serif;
-                        color: #2f2f2f;
+                        padding: 28px;
+                        background: #f7f1e8;
+                        color: #344124;
+                        font-family: "Cormorant Garamond", Georgia, serif;
                     }
-                    .card {
-                        width: 850px;
-                        max-width: 92%;
-                        background: #fff;
-                        border: 1px solid #ddd2c7;
-                        border-radius: 28px;
-                        padding: 56px;
-                        box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+
+                    .certificate {
+                        width: 1050px;
+                        max-width: 100%;
+                        min-height: 660px;
+                        position: relative;
+                        overflow: hidden;
+                        padding: 74px 86px 64px;
                         text-align: center;
+                        border: 1px solid rgba(184, 138, 56, 0.38);
+                        border-radius: 30px;
+                        background:
+                            radial-gradient(circle at 50% 10%, rgba(255,255,255,.96), transparent 32%),
+                            linear-gradient(180deg, rgba(255, 252, 246, .98), rgba(251, 246, 237, .96));
+                        box-shadow: 0 24px 60px rgba(60, 47, 29, 0.12);
                     }
-                    .kicker {
-                        margin: 0 0 10px;
-                        letter-spacing: 0.16em;
-                        text-transform: uppercase;
-                        color: #8a827b;
-                        font-size: 14px;
+
+                    .certificate::before {
+                        content: "";
+                        position: absolute;
+                        inset: 18px;
+                        border: 1px solid rgba(184, 138, 56, 0.24);
+                        border-radius: 22px;
+                        pointer-events: none;
                     }
-                    h1 {
-                        margin: 0 0 18px;
-                        font-size: 52px;
-                        font-weight: 500;
-                    }
-                    .name {
-                        font-size: 38px;
-                        margin: 18px 0;
-                        color: #7f9788;
+
+                    .certificate::after {
+                        content: "Z & V";
+                        position: absolute;
+                        left: 50%;
+                        bottom: -34px;
+                        transform: translateX(-50%);
+                        font-size: 136px;
+                        line-height: 1;
                         font-weight: 700;
+                        letter-spacing: .04em;
+                        color: rgba(52, 65, 36, 0.045);
+                        white-space: nowrap;
+                        pointer-events: none;
                     }
+
+                    .inner {
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    .kicker {
+                        margin: 0 0 14px;
+                        font-family: "Inter", Arial, sans-serif;
+                        font-size: 13px;
+                        font-weight: 800;
+                        letter-spacing: 0.26em;
+                        text-transform: uppercase;
+                        color: #b88a38;
+                    }
+
+                    .brand {
+                        margin: 0 0 24px;
+                        font-size: 30px;
+                        font-weight: 600;
+                        letter-spacing: 0.09em;
+                        color: #4d5f35;
+                    }
+
+                    .brand span {
+                        color: #b88a38;
+                    }
+
+                    h1 {
+                        margin: 0;
+                        font-size: 60px;
+                        font-weight: 600;
+                        line-height: 1.08;
+                        letter-spacing: .02em;
+                        color: #344124;
+                    }
+
+                    .divider {
+                        width: 170px;
+                        height: 18px;
+                        margin: 24px auto 26px;
+                        position: relative;
+                    }
+
+                    .divider::before,
+                    .divider::after {
+                        content: "";
+                        position: absolute;
+                        top: 9px;
+                        width: 68px;
+                        height: 1px;
+                        background: rgba(184, 138, 56, 0.55);
+                    }
+
+                    .divider::before { left: 0; }
+                    .divider::after { right: 0; }
+
+                    .divider span {
+                        display: inline-block;
+                        color: #b88a38;
+                        font-size: 18px;
+                        line-height: 18px;
+                    }
+
+                    .name {
+                        margin: 8px 0 20px;
+                        font-family: "Great Vibes", cursive;
+                        font-size: 58px;
+                        color: #c48673;
+                        line-height: 1.08;
+                    }
+
+                    .destination {
+                        margin: 0 auto 12px;
+                        max-width: 680px;
+                        font-size: 26px;
+                        color: #766f62;
+                    }
+
                     .reward {
-                        font-size: 28px;
-                        margin: 20px 0 8px;
+                        display: inline-block;
+                        margin: 18px 0 6px;
+                        padding: 14px 30px;
+                        border: 1px solid rgba(184, 138, 56, 0.32);
+                        border-radius: 999px;
+                        background: rgba(184, 138, 56, 0.08);
+                        font-family: "Inter", Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: 800;
+                        letter-spacing: .13em;
+                        text-transform: uppercase;
+                        color: #4d5f35;
                     }
-                    .meta {
-                        font-size: 22px;
-                        margin: 8px 0;
-                    }
+
                     .footer {
-                        margin-top: 30px;
-                        color: #8a827b;
-                        font-size: 20px;
+                        margin: 28px 0 0;
+                        font-size: 24px;
+                        font-style: italic;
+                        color: #8d857d;
+                    }
+
+                    .date {
+                        margin: 28px 0 0;
+                        font-family: "Inter", Arial, sans-serif;
+                        font-size: 11px;
+                        font-weight: 700;
+                        letter-spacing: .24em;
+                        text-transform: uppercase;
+                        color: #b88a38;
+                    }
+
+                    @media print {
+                        @page {
+                            size: A4 landscape;
+                            margin: 0;
+                        }
+
+                        body {
+                            width: 297mm;
+                            height: 210mm;
+                            padding: 0;
+                            background: white;
+                        }
+
+                        .certificate {
+                            width: 297mm;
+                            height: 210mm;
+                            max-width: none;
+                            min-height: 0;
+                            border-radius: 0;
+                            box-shadow: none;
+                            border: none;
+                            padding: 27mm 32mm 22mm;
+                        }
+
+                        .certificate::before {
+                            inset: 8mm;
+                            border-radius: 8mm;
+                        }
                     }
                 </style>
             </head>
             <body>
-                <div class="card">
-                    <p class="kicker">${prize.kicker}</p>
-                    <h1>${prize.title}</h1>
-                    <div class="name">${playerName}</div>
-                    <p class="reward">${prize.reward}</p>
-                    <p class="meta">${prize.destination}</p>
-                    <p class="footer">${prize.footer}</p>
+                <div class="certificate">
+                    <div class="inner">
+                        <p class="kicker">${prize.kicker}</p>
+                        <p class="brand">Zuzana <span>&amp;</span> Valerio</p>
+                        <h1>${prize.title}</h1>
+                        <div class="divider"><span>♡</span></div>
+                        <div class="name">${safeName}</div>
+                        <p class="destination">${prize.destination}</p>
+                        <p class="reward">${prize.reward}</p>
+                        <p class="footer">${prize.footer}</p>
+                        <p class="date">Rimini · 19. 09. 2026</p>
+                    </div>
                 </div>
                 <script>
                     window.onload = function() {
@@ -895,6 +1135,37 @@ document.addEventListener("DOMContentLoaded", () => {
         langButtons.forEach((btn) => {
             btn.classList.toggle("active", btn.dataset.lang === lang);
         });
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            const parts = key.split(".");
+            let value = TEXTS[currentLang];
+            for (const part of parts) {
+                value = value?.[part];
+            }
+            if (typeof value !== "string" && key.startsWith("game.")) {
+                const legacyKey = key.slice(5);
+                value = TEXTS[currentLang].ui?.[legacyKey];
+            }
+            if (typeof value === "string") {
+                el.textContent = value;
+            }
+        });
+
+        if (stepIndicators[0]) stepIndicators[0].textContent = TEXTS[currentLang].ui.step1;
+        if (stepIndicators[1]) stepIndicators[1].textContent = TEXTS[currentLang].ui.step2;
+        if (stepIndicators[2]) stepIndicators[2].textContent = TEXTS[currentLang].ui.step3;
+        if (stepIndicators[3]) stepIndicators[3].textContent = TEXTS[currentLang].ui.step4;
+
+        if (guestCountrySelect) {
+            const countryLabels = { sk: "countrySk", lu: "countryLu", it: "countryIt" };
+            Array.from(guestCountrySelect.options).forEach((option) => {
+                const labelKey = countryLabels[option.value];
+                if (labelKey && TEXTS[currentLang].ui[labelKey]) {
+                    option.textContent = TEXTS[currentLang].ui[labelKey];
+                }
+            });
+        }
 
         if (beginJourneyBtn) beginJourneyBtn.textContent = t("buttons", "beginJourney");
         if (finishPackingBtn) finishPackingBtn.textContent = t("buttons", "finishPacking");

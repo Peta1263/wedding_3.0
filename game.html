@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -429,7 +429,7 @@
       line-height: 1.2;
     }
 
-    /* Suitcase */
+    /* Kufor */
     .suitcase-card {
       background: rgba(255,252,246,0.9);
       border: 1px solid rgba(184, 138, 56, 0.28);
@@ -753,30 +753,42 @@
     .final-scene {
       border-radius: 24px;
       overflow: hidden;
-      background: linear-gradient(135deg, #344124 0%, #4d5f35 50%, #344124 100%);
-      min-height: 420px;
+      min-height: 430px;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      background-image: url("images/couple.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 18px 42px rgba(60, 47, 29, 0.10);
     }
 
     .final-scene::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(184,138,56,0.25), transparent 60%);
+      background:
+        linear-gradient(180deg, rgba(35, 35, 35, 0.30), rgba(35, 35, 35, 0.45)),
+        radial-gradient(ellipse at 50% 18%, rgba(255, 252, 246, 0.18), transparent 55%);
     }
 
     .final-overlay {
       text-align: center;
-      padding: 60px 48px;
+      padding: 54px 46px;
       position: relative;
       z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 14px;
+      width: min(92%, 720px);
+      border: 1px solid rgba(255, 252, 246, 0.32);
+      border-radius: 24px;
+      background: rgba(52, 65, 36, 0.34);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
     }
 
     .final-overlay .game-kicker {
@@ -934,36 +946,36 @@
 
         <!-- Head -->
         <div class="game-head">
-          <p class="game-kicker" data-i18n="game.kicker">Interactive Wedding Journey</p>
-          <h1 class="game-main-title" data-i18n="game.title">Journey to Rimini</h1>
-          <p class="game-subtitle" data-i18n="game.subtitle">Pack wisely, travel safely, and arrive at the wedding.</p>
+          <p class="game-kicker" data-i18n="game.kicker">INTERAKTÍVNA SVADOBNÁ CESTA</p>
+          <h1 class="game-main-title" data-i18n="game.title">Cesta do Rimini</h1>
+          <p class="game-subtitle" data-i18n="game.subtitle">Zbaľ kufor, zvládni cestu a doraz na svadbu.</p>
         </div>
 
-        <!-- Progress steps -->
+        <!-- Postup steps -->
         <div class="game-progress-wrap">
-          <div class="game-step active current" id="stepIndicator1">1. Pack</div>
-          <div class="game-step" id="stepIndicator2">2. Travel</div>
-          <div class="game-step" id="stepIndicator3">3. Airport</div>
-          <div class="game-step" id="stepIndicator4">4. Arrival</div>
+          <div class="game-step active current" id="stepIndicator1">1. Balenie</div>
+          <div class="game-step" id="stepIndicator2">2. Cesta</div>
+          <div class="game-step" id="stepIndicator3">3. Letisko</div>
+          <div class="game-step" id="stepIndicator4">4. Príchod</div>
         </div>
 
         <!-- INTRO -->
         <div class="game-panel" id="introScreen">
           <div class="game-intro-card">
-            <label class="game-label" for="guestName" data-i18n="game.nameLabel">Your name</label>
-            <input id="guestName" class="game-input" type="text" placeholder="Enter your name" />
+            <label class="game-label" for="guestName" data-i18n="game.nameLabel">Tvoje meno</label>
+            <input id="guestName" class="game-input" type="text" placeholder="Zadaj svoje meno" />
 
-            <label class="game-label" for="guestCountry">Your country</label>
+            <label class="game-label" for="guestCountry" data-i18n="game.countryLabel">Odkiaľ cestuješ</label>
             <select id="guestCountry" class="game-input">
-              <option value="sk">Slovakia</option>
-              <option value="lu">Luxembourg</option>
-              <option value="it">Italy</option>
+              <option value="sk">Slovensko</option>
+              <option value="lu">Luxembursko</option>
+              <option value="it">Taliansko</option>
             </select>
 
-            <p class="game-text" data-i18n="game.introText">Before leaving for the wedding, you need to pack your suitcase.</p>
+            <p class="game-text" data-i18n="game.introText">Pred odchodom na svadbu si najprv priprav kufor.</p>
 
             <button class="play-btn" id="beginJourneyBtn" type="button" data-i18n="game.begin" style="align-self:center; margin-top:8px;">
-              Begin the journey
+              Začať cestu
             </button>
           </div>
         </div>
@@ -974,7 +986,7 @@
             <img id="storyImage" class="game-scene-image" alt="" />
             <p id="storyText" class="game-scene-text"></p>
             <div class="final-slide-actions">
-              <button type="button" class="play-btn" id="storyNextBtn">Next</button>
+              <button type="button" class="play-btn" id="storyĎalejBtn">Ďalej</button>
             </div>
           </div>
         </div>
@@ -983,20 +995,20 @@
         <div class="game-panel hidden" id="packingScreen">
           <div class="packing-layout">
             <div class="packing-side">
-              <h2 class="game-section-title" data-i18n="game.packTitle">Pack your suitcase</h2>
-              <p class="game-text" data-i18n="game.packText">Click items to add them to your suitcase. Choose wisely – some items are not allowed!</p>
+              <h2 class="game-section-title" data-i18n="game.packTitle">Zbaľ kufor</h2>
+              <p class="game-text" data-i18n="game.packText">Klikni na veci, ktoré chceš vložiť do kufra. Vyberaj pozorne – niektoré predmety cez kontrolu neprejdú.</p>
               <div class="packing-items" id="packingItems"></div>
             </div>
             <div class="packing-side">
               <div class="suitcase-card">
                 <div class="suitcase-top">
-                  <h3 data-i18n="game.suitcase">Suitcase</h3>
+                  <h3 data-i18n="game.suitcase">Kufor</h3>
                   <span id="suitcaseCount">0 / 8</span>
                 </div>
                 <div class="suitcase-grid" id="suitcaseGrid"></div>
                 <div class="suitcase-actions">
-                  <button class="secondary-btn" id="resetSuitcaseBtn" type="button" data-i18n="game.reset">Reset</button>
-                  <button class="play-btn" id="finishPackingBtn" type="button" data-i18n="game.finishPacking">Continue</button>
+                  <button class="secondary-btn" id="resetKuforBtn" type="button" data-i18n="game.reset">Vyprázdniť kufor</button>
+                  <button class="play-btn" id="finishPackingBtn" type="button" data-i18n="game.finishPacking">Pokračovať</button>
                 </div>
               </div>
             </div>
@@ -1007,17 +1019,17 @@
         <div class="game-panel hidden" id="roadScreen">
           <div class="road-topbar">
             <div class="road-badge">
-              <span data-i18n="game.progress">Progress</span>
-              <strong id="roadProgressText">0%</strong>
+              <span data-i18n="game.progress">Postup</span>
+              <strong id="roadPostupText">0%</strong>
             </div>
             <div class="road-badge">
-              <span data-i18n="game.delays">Traffic hits</span>
+              <span data-i18n="game.delays">Zrážky</span>
               <strong id="roadHitsText">0</strong>
             </div>
           </div>
 
           <div class="road-start-bar">
-            <button class="road-start-btn" id="startRoadBtn" type="button">Start</button>
+            <button class="road-start-btn" id="startRoadBtn" type="button">Štart</button>
           </div>
 
           <canvas id="roadCanvas" width="1100" height="460"></canvas>
@@ -1035,19 +1047,19 @@
             <button id="roadDownBtn" type="button" aria-label="Down">↓</button>
           </div>
 
-          <p class="road-swipe-hint">Swipe up/down on canvas or use the buttons above</p>
-          <p class="game-text center" data-i18n="game.roadHelp">Use ↑ ↓ arrow keys or buttons to switch lanes and avoid traffic.</p>
+          <p class="road-swipe-hint" data-i18n="game.roadHint">Potiahni po ploche hore/dole alebo použi tlačidlá.</p>
+          <p class="game-text center" data-i18n="game.roadHelp">Použi šípky ↑ ↓ alebo tlačidlá na zmenu pruhu a vyhni sa premávke.</p>
         </div>
 
         <!-- SECURITY – Level 3 -->
         <div class="game-panel hidden" id="securityScreen">
           <div class="security-card">
-            <h2 class="game-section-title" data-i18n="game.securityTitle">Airport security</h2>
-            <p class="game-text" id="securityMessage">Your suitcase is being checked.</p>
+            <h2 class="game-section-title" data-i18n="game.securityTitle">Bezpečnostná kontrola</h2>
+            <p class="game-text" id="securityMessage">Tvoj kufor sa kontroluje.</p>
 
             <div class="scanner-wrap">
               <div class="scanner-belt">
-                <div class="scanner-suitcase" id="scannerSuitcase">🧳</div>
+                <div class="scanner-suitcase" id="scannerKufor">🧳</div>
                 <div class="scanner-gate" id="scannerGate">
                   <div class="scanner-light" id="scannerLight"></div>
                 </div>
@@ -1055,7 +1067,7 @@
             </div>
 
             <div class="security-actions hidden" id="securityRetryWrap">
-              <button class="play-btn" id="repackBtn" type="button" data-i18n="game.repack">Repack the suitcase</button>
+              <button class="play-btn" id="repackBtn" type="button" data-i18n="game.repack">Prebaliť kufor</button>
             </div>
           </div>
         </div>
@@ -1065,12 +1077,12 @@
           <div class="final-scene">
             <div class="final-overlay">
               <p class="game-kicker">Rimini</p>
-              <h2 class="final-title" data-i18n="game.finalTitle">You made it</h2>
-              <p class="final-text" id="finalPersonalText">Welcome to Rimini.</p>
-              <p class="final-reward" data-i18n="game.rewardText">Your prize: a dance with the newlyweds</p>
+              <h2 class="final-title" data-i18n="game.finalTitle">Zvládol/a si to</h2>
+              <p class="final-text" id="finalPersonalText">Vitaj v Rimini.</p>
+              <p class="final-reward" data-i18n="game.rewardText">Tvoja výhra: tanec s novomanželmi</p>
               <div class="game-win-actions">
-                <button class="play-btn" id="downloadPrizeBtn" type="button" data-i18n="game.downloadPrize">Download your prize</button>
-                <a class="secondary-btn" href="index.html" data-i18n="game.backSite">Back to website</a>
+                <button class="play-btn" id="downloadPrizeBtn" type="button" data-i18n="game.downloadPrize">Stiahnuť odmenu</button>
+                <a class="secondary-btn" href="index.html" data-i18n="game.backSite">Späť na stránku</a>
               </div>
             </div>
           </div>
@@ -1081,7 +1093,6 @@
   </section>
 </main>
 
-<script src="script.js"></script>
 <script src="game.js"></script>
 </body>
 </html>
