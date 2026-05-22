@@ -5894,7 +5894,17 @@ footer {
 
 
 
+.hero-divider .hd-heart {
+  display: none !important;
+}
 
 .hero-divider {
   gap: 0 !important;
+  width: 150px !important;
 }
+
+.hero-divider .hd-line {
+  flex: 1 1 auto !important;
+  width: auto !important;
+}
+
