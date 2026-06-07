@@ -108,25 +108,6 @@ const i18n = {
     tip_view: "Výhľad",
     tip_shopping: "Nákupy",
     btn_map: "Otvoriť mapu",
-    tips_intro: "Malý výber miest v Rimini, kam môžete zájsť na kávu, večeru alebo krátku prechádzku.",
-    tips_filter_cafes: "Kaviarne",
-    tips_filter_restaurants: "Reštaurácie",
-    tips_filter_places: "Miesta na návštevu",
-    tip_visit: "Miesto",
-    tip_pascucci_desc: "Príjemné miesto na rannú kávu alebo krátku prestávku pri prechádzke po Marina Centro.",
-    tip_dallajole_desc: "Milé miesto pri prístave, ideálne na kávu alebo niečo malé počas prechádzky.",
-    tip_antica_desc: "Dobrá zastávka na kávu priamo v historickom centre mesta.",
-    tip_cavour_desc: "Pekná voľba na kávu v centre, blízko historických miest.",
-    tip_lella_desc: "Obľúbená reštaurácia pri mori, vhodná na pohodovú večeru v talianskej atmosfére.",
-    tip_esse_desc: "Miesto s lokálnou kuchyňou, vhodné na ochutnanie niečoho typického z Romagne.",
-    tip_amarina_desc: "Príjemná reštaurácia na jedlo pri mori, keď chcete pokojný večer v Rimini.",
-    tip_portolotto_desc: "Dobrá voľba v prístavnej časti, najmä ak máte chuť na večeru pri vode.",
-    tip_castel_desc: "Historický hrad a pekná zastávka počas prechádzky centrom Rimini.",
-    tip_piazza_cavour_desc: "Jedno z najkrajších námestí v Rimini, vhodné na krátku prechádzku aj fotku.",
-    tip_tre_martiri_desc: "Živé námestie v centre mesta, ideálne spojiť s kávou alebo zmrzlinou.",
-    tip_arco_desc: "Známy rímsky oblúk a jedna z najtypickejších pamiatok Rimini.",
-    tip_domus_desc: "Archeologické miesto v centre, vhodné najmä pre krátku kultúrnu zastávku.",
-    tip_darsena_desc: "Pekná časť pri prístave na večernú prechádzku pri vode.",
 
     sec_wedding_party: "Družba a družičky",
     role_best_man: "Družba",
@@ -182,6 +163,12 @@ const i18n = {
     faq2_a7: "Odporúčame mať vlastnú dopravu, no detaily doplníme neskôr.",
     faq2_q8: "Bude po oslave zabezpečená doprava?",
     faq2_a8: "Informácie o doprave po oslave doplníme čoskoro.",
+    faq2_q9: "Môžeme počas obradu fotiť?",
+    faq2_a9: "Áno, môžete si urobiť pár fotiek, no prosíme, aby ste si obrad hlavne užili s nami.",
+    faq2_q10: "Čo ak bude pršať?",
+    faq2_a10: "Ak by nám počasie neprialo, presunieme sa dovnútra a všetko si užijeme rovnako krásne.",
+    faq2_q11: "Bude čas ísť na pláž?",
+    faq2_a11: "Áno, určite. Záleží najmä na tom, kedy prídete — pokojne si môžete naplánovať pláž v piatok, v sobotu ráno alebo v nedeľu.",
 
     game_badge: "MINI HRA",
     game_title: "Chceš vyhrať cenu?",
@@ -267,25 +254,6 @@ const i18n = {
     tip_view: "Viewpoint",
     tip_shopping: "Shopping",
     btn_map: "Open Map",
-    tips_intro: "A small selection of places in Rimini for coffee, dinner or a short walk.",
-    tips_filter_cafes: "Cafés",
-    tips_filter_restaurants: "Restaurants",
-    tips_filter_places: "Places to visit",
-    tip_visit: "Place",
-    tip_pascucci_desc: "A pleasant place for morning coffee or a short break while walking around Marina Centro.",
-    tip_dallajole_desc: "A lovely spot near the harbour, ideal for coffee or something small during a walk.",
-    tip_antica_desc: "A nice coffee stop right in the historic centre of the city.",
-    tip_cavour_desc: "A good choice for coffee in the centre, close to historic places.",
-    tip_lella_desc: "A popular seaside restaurant, perfect for a relaxed dinner with an Italian atmosphere.",
-    tip_esse_desc: "A place with local cuisine, ideal for trying something typical from Romagna.",
-    tip_amarina_desc: "A pleasant restaurant for a meal by the sea when you want a calm evening in Rimini.",
-    tip_portolotto_desc: "A good choice in the harbour area, especially for dinner near the water.",
-    tip_castel_desc: "A historic castle and a lovely stop during a walk through Rimini centre.",
-    tip_piazza_cavour_desc: "One of the prettiest squares in Rimini, perfect for a short walk or photo.",
-    tip_tre_martiri_desc: "A lively square in the city centre, easy to combine with coffee or gelato.",
-    tip_arco_desc: "The famous Roman arch and one of the most typical landmarks in Rimini.",
-    tip_domus_desc: "An archaeological site in the centre, great for a short cultural stop.",
-    tip_darsena_desc: "A lovely harbour area for an evening walk by the water.",
 
     sec_wedding_party: "Groomsman & Bridesmaids",
     role_best_man: "Groomsman",
@@ -341,6 +309,12 @@ const i18n = {
     faq2_a7: "We recommend having your own transport, but we will add details later.",
     faq2_q8: "Will there be transport after the reception?",
     faq2_a8: "We will add information about transport after the reception soon.",
+    faq2_q9: "Can we take photos during the ceremony?",
+    faq2_a9: "Yes, you can take a few photos, but we kindly ask you to enjoy the ceremony with us in the moment.",
+    faq2_q10: "What happens if it rains?",
+    faq2_a10: "If the weather is not on our side, we will move indoors and enjoy everything just as beautifully.",
+    faq2_q11: "Will there be time to go to the beach?",
+    faq2_a11: "Yes, definitely. It depends on when you arrive — Friday, Saturday morning or Sunday can all be lovely beach moments.",
 
     game_badge: "MINI GAME",
     game_title: "Want to win a prize?",
@@ -426,25 +400,6 @@ const i18n = {
     tip_view: "Panorama",
     tip_shopping: "Shopping",
     btn_map: "Apri mappa",
-    tips_intro: "Una piccola selezione di posti a Rimini per un caffè, una cena o una passeggiata.",
-    tips_filter_cafes: "Caffetterie",
-    tips_filter_restaurants: "Ristoranti",
-    tips_filter_places: "Luoghi da visitare",
-    tip_visit: "Luogo",
-    tip_pascucci_desc: "Un posto piacevole per un caffè al mattino o una breve pausa passeggiando per Marina Centro.",
-    tip_dallajole_desc: "Un posto carino vicino al porto, ideale per un caffè o qualcosa di piccolo durante una passeggiata.",
-    tip_antica_desc: "Una bella sosta per un caffè nel centro storico della città.",
-    tip_cavour_desc: "Una buona scelta per un caffè in centro, vicino ai luoghi storici.",
-    tip_lella_desc: "Un ristorante sul mare molto amato, perfetto per una cena tranquilla in atmosfera italiana.",
-    tip_esse_desc: "Un posto con cucina locale, ideale per provare qualcosa di tipico della Romagna.",
-    tip_amarina_desc: "Un ristorante piacevole per mangiare vicino al mare e passare una serata tranquilla a Rimini.",
-    tip_portolotto_desc: "Una buona scelta nella zona del porto, soprattutto per una cena vicino all’acqua.",
-    tip_castel_desc: "Un castello storico e una bella tappa durante una passeggiata nel centro di Rimini.",
-    tip_piazza_cavour_desc: "Una delle piazze più belle di Rimini, perfetta per una breve passeggiata o una foto.",
-    tip_tre_martiri_desc: "Una piazza vivace nel centro, da abbinare facilmente a un caffè o a un gelato.",
-    tip_arco_desc: "Il famoso arco romano e uno dei monumenti più tipici di Rimini.",
-    tip_domus_desc: "Un sito archeologico in centro, adatto a una breve tappa culturale.",
-    tip_darsena_desc: "Una bella zona del porto per una passeggiata serale vicino all’acqua.",
 
     sec_wedding_party: "Testimone e damigelle",
     role_best_man: "Testimone",
@@ -500,6 +455,12 @@ const i18n = {
     faq2_a7: "Consigliamo di avere un mezzo proprio, ma aggiungeremo i dettagli in seguito.",
     faq2_q8: "Ci sarà un servizio di trasporto dopo il ricevimento?",
     faq2_a8: "Aggiungeremo le informazioni sul trasporto post-ricevimento a breve.",
+    faq2_q9: "Possiamo fare foto durante la cerimonia?",
+    faq2_a9: "Sì, potete scattare qualche foto, ma vi chiediamo di vivere soprattutto questo momento insieme a noi.",
+    faq2_q10: "Cosa succede se piove?",
+    faq2_a10: "Se il tempo non sarà dalla nostra parte, ci sposteremo all’interno e ci godremo tutto con la stessa gioia.",
+    faq2_q11: "Ci sarà tempo per andare in spiaggia?",
+    faq2_a11: "Sì, certamente. Dipende soprattutto da quando arrivate — venerdì, sabato mattina o domenica possono essere momenti perfetti per il mare.",
 
     game_badge: "MINI GIOCO",
     game_title: "Vuoi vincere un premio?",
@@ -514,9 +475,9 @@ const i18n = {
 let currentLang = "sk";
 
 const RSVP_LINKS = {
-  sk: "https://wa.me/4367855838604?text=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1me%20%C5%A1peci%C3%A1lnu%20po%C5%BEiadavku%20k%20svadbe%3A",
-  en: "https://wa.me/4367855838604?text=Hello%2C%20we%20have%20a%20special%20request%20for%20the%20wedding%3A",
-  it: "https://wa.me/4367855838604?text=Ciao%2C%20abbiamo%20una%20richiesta%20speciale%20per%20il%20matrimonio%3A"
+  sk: "mailto:?subject=Svadba%20-%20%C5%A1peci%C3%A1lne%20po%C5%BEiadavky",
+  en: "mailto:?subject=Wedding%20-%20special%20requests",
+  it: "mailto:?subject=Matrimonio%20-%20richieste%20speciali"
 };
 
 function applyLang(lang) {
@@ -563,20 +524,33 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
 // Nastaviť slovenčinu ako predvolenú
 applyLang("sk");
 
+// Prepínanie kategórií v sekcii Tipy od nás
+function setupTipsFilters() {
+  const filterButtons = document.querySelectorAll(".tips-filter-btn");
+  const tipCards = document.querySelectorAll("[data-tip-category]");
 
-/* =========================================================
-   TIPY FILTERS
-   ========================================================= */
-document.querySelectorAll("[data-tip-filter]").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const category = btn.getAttribute("data-tip-filter");
+  if (!filterButtons.length || !tipCards.length) return;
 
-    document.querySelectorAll("[data-tip-filter]").forEach((filterBtn) => {
-      filterBtn.classList.toggle("active", filterBtn === btn);
+  function showCategory(category) {
+    filterButtons.forEach((btn) => {
+      btn.classList.toggle("active", btn.getAttribute("data-tip-filter") === category);
     });
 
-    document.querySelectorAll("[data-tip-category]").forEach((card) => {
-      card.hidden = card.getAttribute("data-tip-category") !== category;
+    tipCards.forEach((card) => {
+      const isVisible = card.getAttribute("data-tip-category") === category;
+      card.hidden = !isVisible;
+    });
+  }
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      showCategory(btn.getAttribute("data-tip-filter"));
     });
   });
-});
+
+  const activeButton = document.querySelector(".tips-filter-btn.active") || filterButtons[0];
+  showCategory(activeButton.getAttribute("data-tip-filter"));
+}
+
+setupTipsFilters();
+
