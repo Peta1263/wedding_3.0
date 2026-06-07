@@ -6085,3 +6085,385 @@ html:not([lang="sk"]) .program-aperitivo {
     line-height: 1.42 !important;
   }
 }
+
+
+/* =========================================================
+   CESTOVANIE — rozklikávacie trasy do Rimini
+   ========================================================= */
+.travel-routes {
+  padding: 0 22px 22px 66px;
+}
+
+.travel-route-lang {
+  display: none;
+}
+
+html[lang="sk"] .travel-route-lang[lang="sk"],
+html[lang="en"] .travel-route-lang[lang="en"],
+html[lang="it"] .travel-route-lang[lang="it"] {
+  display: block;
+}
+
+.travel-route-intro {
+  padding: 0 !important;
+  margin: 0 0 14px !important;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--muted) !important;
+}
+
+.route-card {
+  margin: 0 0 10px !important;
+  border: 1px solid rgba(184, 138, 56, 0.24) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 252, 246, 0.64) !important;
+  overflow: hidden;
+}
+
+.route-card summary {
+  padding: 15px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 4px !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  color: var(--olive-dark) !important;
+}
+
+.route-card summary::after {
+  position: absolute;
+  right: 16px;
+  top: 13px;
+}
+
+.route-card summary small {
+  max-width: calc(100% - 34px);
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.route-card ul {
+  margin: 0 !important;
+  padding: 0 16px 14px 30px !important;
+  color: var(--ink) !important;
+}
+
+.route-card li {
+  margin: 0 0 8px !important;
+  padding-left: 2px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.route-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 16px 16px 16px;
+}
+
+.route-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 13px;
+  border: 1px solid rgba(77, 95, 53, 0.42);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.40);
+  color: var(--olive-dark);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.route-links a:hover {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .travel-routes {
+    padding: 0 14px 18px 14px;
+  }
+
+  .travel-route-intro {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 12px !important;
+  }
+
+  .route-card summary {
+    padding: 14px 42px 14px 14px !important;
+    font-size: 17px !important;
+  }
+
+  .route-card summary::after {
+    right: 14px;
+    top: 13px;
+  }
+
+  .route-card li {
+    font-size: 12.5px;
+  }
+}
+
+/* =========================================================
+   FINAL FIX — autobus a bankové údaje
+   Tento blok musí zostať na konci CSS.
+   ========================================================= */
+.route-note {
+  padding: 0 16px 16px 16px !important;
+  margin: 0 !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: var(--ink) !important;
+}
+
+.bank-details {
+  width: 100% !important;
+  max-width: 285px !important;
+  margin: 2px auto 14px !important;
+  display: grid !important;
+  gap: 8px !important;
+}
+
+.bank-detail-row {
+  width: 100% !important;
+  padding: 11px 12px !important;
+  border: 1px solid rgba(184, 138, 56, 0.24) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 252, 246, 0.58) !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+  color: var(--olive-dark) !important;
+  text-align: center !important;
+}
+
+.bank-detail-row strong {
+  display: block !important;
+  margin-top: 4px !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  word-break: break-word !important;
+}
+
+@media (max-width: 430px) {
+  .bank-detail-row {
+    font-size: 11.5px !important;
+    padding: 10px 8px !important;
+  }
+}
+
+/* =========================================================
+   TIPY OD NÁS — kategórie, fotky a miesta bez fotiek
+   ========================================================= */
+.tips-head {
+  margin-bottom: 26px !important;
+}
+
+.tips-head p {
+  max-width: 620px !important;
+  margin: 0 auto !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+  color: var(--muted) !important;
+}
+
+.tips-filters {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  max-width: 780px !important;
+  margin: 0 auto 30px !important;
+}
+
+.tips-filter-btn {
+  min-height: 42px !important;
+  padding: 0 22px !important;
+  border: 1px solid rgba(184, 138, 56, .34) !important;
+  border-radius: 999px !important;
+  background: rgba(255, 252, 246, .62) !important;
+  color: var(--olive-dark) !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .10em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  white-space: normal !important;
+  line-height: 1.25 !important;
+  text-align: center !important;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease !important;
+}
+
+.tips-filter-btn:hover,
+.tips-filter-btn.active {
+  background: var(--olive) !important;
+  border-color: var(--olive) !important;
+  color: #fff !important;
+}
+
+.tips-cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+.tip-card[hidden] {
+  display: none !important;
+}
+
+.tip-place-card {
+  min-height: 100% !important;
+  padding: 18px 16px 20px !important;
+  border-radius: 22px !important;
+  background: rgba(255, 252, 246, .66) !important;
+  box-shadow: 0 12px 30px rgba(60, 47, 29, .055) !important;
+}
+
+.tip-photo-wrap {
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  border: 1px solid rgba(184, 138, 56, .24) !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  background: rgba(255, 252, 246, .72) !important;
+  margin: 0 auto 16px !important;
+}
+
+.tip-photo {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.tip-place-card > span {
+  margin: 0 0 12px !important;
+  font-size: 11px !important;
+  letter-spacing: .14em !important;
+  color: var(--gold) !important;
+}
+
+.tip-place-card .tip-text {
+  padding-top: 14px !important;
+  margin: 0 0 12px !important;
+  border-top: 1px solid rgba(184, 138, 56, .24) !important;
+}
+
+.tip-place-card h3 {
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: var(--olive-dark) !important;
+  line-height: 1.12 !important;
+}
+
+.tip-place-card p {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  color: var(--muted) !important;
+}
+
+.tip-place-card .tip-desc {
+  margin-top: 8px !important;
+  font-size: 12.5px !important;
+  color: var(--ink) !important;
+  line-height: 1.55 !important;
+}
+
+.tip-visit-card {
+  min-height: 0 !important;
+  padding: 24px 18px 20px !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(184, 138, 56, .08), transparent 45%),
+    rgba(255, 252, 246, .72) !important;
+}
+
+.tip-visit-icon {
+  width: 58px !important;
+  height: 58px !important;
+  display: grid !important;
+  place-items: center !important;
+  margin: 0 auto 16px !important;
+  border: 1px solid rgba(184, 138, 56, .34) !important;
+  border-radius: 50% !important;
+  background: rgba(255, 252, 246, .78) !important;
+  color: var(--gold) !important;
+}
+
+.tip-visit-icon svg {
+  width: 28px !important;
+  height: 28px !important;
+  stroke: currentColor !important;
+}
+
+.tip-visit-card .tip-text {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.tip-visit-card h3 {
+  font-size: 25px !important;
+}
+
+@media (max-width: 1100px) {
+  .tips-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .tips-filters {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    max-width: 290px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .tips-filter-btn {
+    width: 100% !important;
+    min-height: 40px !important;
+    padding: 8px 14px !important;
+    font-size: 10px !important;
+    letter-spacing: .07em !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+
+  .tips-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .tip-place-card {
+    padding: 18px 16px 20px !important;
+  }
+
+  .tip-photo-wrap {
+    max-width: 260px !important;
+  }
+
+  .tip-visit-card {
+    padding: 24px 16px 20px !important;
+  }
+}

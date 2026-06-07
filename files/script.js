@@ -41,8 +41,13 @@ const i18n = {
     nav_tips: "Tipy",
     nav_info: "Info",
     nav_faq: "FAQ",
-    nav_rsvp: "Požiadavky",
+    nav_rsvp: "RSVP",
     nav_game: "Hra",
+    nav_diz: "Italiano",
+
+    diz_eyebrow: "Prima del matrimonio",
+    diz_title: "Malý taliansky slovník",
+    diz_subtitle: "Pár slov, ktoré sa vám na svadbe určite hodia — a možno aj pobavia.",
 
     hero_date: "19. SEPTEMBER 2026",
     hero_note: "Pripravte sa na víkend plný mora, talianskej atmosféry a spoločných chvíľ, na ktoré budeme dlho spomínať.",
@@ -54,7 +59,7 @@ const i18n = {
     prog_aperitivo_note: "Malé talianske občerstvenie pri pohári vína pred večerou.",
     prog_photos: "Gratulácie a fotenie",
     prog_dinner: "Večera",
-    prog_dance: "Afterparty pre najvytrvalejších",
+    prog_dance: "Prvý tanec",
     prog_cake: "Torta",
     prog_party: "Party",
 
@@ -66,22 +71,22 @@ const i18n = {
     sec_travel: "Cestovanie a ubytovanie",
     travel_desc: "Tu nájdete všetky praktické informácie o ceste do Rimini a ubytovaní počas svadobného víkendu.",
     travel_how: "Ako sa dostať do Rimini",
-    travel_how_desc: "Detaily budú zverejnené neskôr. Peter má najviac informácií.",
+    travel_how_desc: "Sem doplníme odporúčané trasy autom, vlakom alebo autobusom.",
     travel_airports: "Letiská v okolí",
-    travel_airports_desc: "Najbližšie možnosti: Rimini, Bologna, Ancona alebo Milano.",
+    travel_airports_desc: "Najbližšie možnosti: Rimini, Bologna alebo Milano.",
     travel_hotels: "Odporúčané ubytovanie",
     travel_hotels_desc: "Hostia zo Slovenska budú ubytovaní v hoteli Hotel Imperiale Rimini & SPA. Viac informácií nájdete cez odkaz nižšie.",
     travel_hotels_btn: "Otvoriť hotel",
     travel_transport: "Doprava po meste",
     travel_transport_desc: "Informácie o MHD, taxíkoch a presunoch medzi obradom a hostinou.",
     travel_parking: "Parkovanie",
-    travel_parking_desc: "V Tenuta Mara je k dispozícii parkovanie pre svadobných hostí.",
+    travel_parking_desc: "Sem doplníme, kde môžu hostia zaparkovať.",
 
-    rsvp_inline_title: "Špeciálne požiadavky",
-    rsvp_inline_lead: "Dajte nám vedieť",
-    rsvp_inline_desc: "Ak máte špeciálne požiadavky, diéty, alergie alebo čokoľvek, o čom by sme mali vedieť, napíšte nám, prosím.",
-    rsvp_inline_until: "",
-    rsvp_inline_btn: "Napísať nám",
+    rsvp_inline_title: "RSVP",
+    rsvp_inline_lead: "Vyplňte, prosím, krátky formulár.",
+    rsvp_inline_desc: "Vo formulári nám potvrdíte účasť, prípadné alergie a ďalšie dôležité informácie.",
+    rsvp_inline_until: "Prosíme vyplniť do",
+    rsvp_inline_btn: "Vyplniť RSVP",
 
     weather_eyebrow: "Svadobný víkend",
     weather_title: "Počasie v Rimini",
@@ -108,25 +113,6 @@ const i18n = {
     tip_view: "Výhľad",
     tip_shopping: "Nákupy",
     btn_map: "Otvoriť mapu",
-    tips_intro: "Malý výber miest v Rimini, kam môžete zájsť na kávu, večeru alebo krátku prechádzku.",
-    tips_filter_cafes: "Kaviarne",
-    tips_filter_restaurants: "Reštaurácie",
-    tips_filter_places: "Miesta na návštevu",
-    tip_visit: "Miesto",
-    tip_pascucci_desc: "Príjemné miesto na rannú kávu alebo krátku prestávku pri prechádzke po Marina Centro.",
-    tip_dallajole_desc: "Milé miesto pri prístave, ideálne na kávu alebo niečo malé počas prechádzky.",
-    tip_antica_desc: "Dobrá zastávka na kávu priamo v historickom centre mesta.",
-    tip_cavour_desc: "Pekná voľba na kávu v centre, blízko historických miest.",
-    tip_lella_desc: "Obľúbená reštaurácia pri mori, vhodná na pohodovú večeru v talianskej atmosfére.",
-    tip_esse_desc: "Miesto s lokálnou kuchyňou, vhodné na ochutnanie niečoho typického z Romagne.",
-    tip_amarina_desc: "Príjemná reštaurácia na jedlo pri mori, keď chcete pokojný večer v Rimini.",
-    tip_portolotto_desc: "Dobrá voľba v prístavnej časti, najmä ak máte chuť na večeru pri vode.",
-    tip_castel_desc: "Historický hrad a pekná zastávka počas prechádzky centrom Rimini.",
-    tip_piazza_cavour_desc: "Jedno z najkrajších námestí v Rimini, vhodné na krátku prechádzku aj fotku.",
-    tip_tre_martiri_desc: "Živé námestie v centre mesta, ideálne spojiť s kávou alebo zmrzlinou.",
-    tip_arco_desc: "Známy rímsky oblúk a jedna z najtypickejších pamiatok Rimini.",
-    tip_domus_desc: "Archeologické miesto v centre, vhodné najmä pre krátku kultúrnu zastávku.",
-    tip_darsena_desc: "Pekná časť pri prístave na večernú prechádzku pri vode.",
 
     sec_wedding_party: "Družba a družičky",
     role_best_man: "Družba",
@@ -200,8 +186,13 @@ const i18n = {
     nav_tips: "Tips",
     nav_info: "Info",
     nav_faq: "FAQ",
-    nav_rsvp: "Requests",
+    nav_rsvp: "RSVP",
     nav_game: "Game",
+    nav_diz: "Italiano",
+
+    diz_eyebrow: "Prima del matrimonio",
+    diz_title: "Little Italian Phrasebook",
+    diz_subtitle: "A few words to help you feel at home in Italy — some useful, some just fun.",
 
     hero_date: "19th SEPTEMBER 2026",
     hero_note: "Get ready for a weekend by the sea, full of Italian charm and moments we will remember for a long time.",
@@ -213,7 +204,7 @@ const i18n = {
     prog_aperitivo_note: "",
     prog_photos: "Congratulations & Photos",
     prog_dinner: "Dinner",
-    prog_dance: "Afterparty for the bravest",
+    prog_dance: "First Dance",
     prog_cake: "Wedding Cake",
     prog_party: "Party",
 
@@ -227,20 +218,20 @@ const i18n = {
     travel_how: "How to get to Rimini",
     travel_how_desc: "We will add recommended routes by car, train or bus.",
     travel_airports: "Nearby Airports",
-    travel_airports_desc: "Closest options: Rimini, Bologna, Ancona or Milan.",
+    travel_airports_desc: "Closest options: Rimini, Bologna or Milan.",
     travel_hotels: "Recommended Accommodation",
-    travel_hotels_desc: "There are many hotels available in and around Rimini. For your convenience, a 10% discount code, “ZUZYVALE”, is available for stays at Hotel Imperiale Rimini & SPA when booking minimum 2 nights (18–19 September). The hotel website can be found below.",
+    travel_hotels_desc: "Recommended hotel for wedding guests: Hotel Imperiale Rimini & SPA. You can find the hotel website below.",
     travel_hotels_btn: "Open hotel",
     travel_transport: "Getting Around",
     travel_transport_desc: "Information about public transport, taxis and transfers between venues.",
     travel_parking: "Parking",
-    travel_parking_desc: "Parking is available at Tenuta Mara for wedding guests.",
+    travel_parking_desc: "We will add parking details for guests.",
 
-    rsvp_inline_title: "Special requests",
-    rsvp_inline_lead: "Let us know",
-    rsvp_inline_desc: "If you have any special requests, dietary needs, allergies or anything else we should know, please send us a message.",
-    rsvp_inline_until: "",
-    rsvp_inline_btn: "Write to us",
+    rsvp_inline_title: "RSVP",
+    rsvp_inline_lead: "Let us know if you will join us.",
+    rsvp_inline_desc: "In the form, you can confirm your attendance, allergies and any other important details.",
+    rsvp_inline_until: "Please fill in by",
+    rsvp_inline_btn: "Fill in RSVP",
 
     weather_eyebrow: "Wedding weekend",
     weather_title: "Weather in Rimini",
@@ -267,25 +258,6 @@ const i18n = {
     tip_view: "Viewpoint",
     tip_shopping: "Shopping",
     btn_map: "Open Map",
-    tips_intro: "A small selection of places in Rimini for coffee, dinner or a short walk.",
-    tips_filter_cafes: "Cafés",
-    tips_filter_restaurants: "Restaurants",
-    tips_filter_places: "Places to visit",
-    tip_visit: "Place",
-    tip_pascucci_desc: "A pleasant place for morning coffee or a short break while walking around Marina Centro.",
-    tip_dallajole_desc: "A lovely spot near the harbour, ideal for coffee or something small during a walk.",
-    tip_antica_desc: "A nice coffee stop right in the historic centre of the city.",
-    tip_cavour_desc: "A good choice for coffee in the centre, close to historic places.",
-    tip_lella_desc: "A popular seaside restaurant, perfect for a relaxed dinner with an Italian atmosphere.",
-    tip_esse_desc: "A place with local cuisine, ideal for trying something typical from Romagna.",
-    tip_amarina_desc: "A pleasant restaurant for a meal by the sea when you want a calm evening in Rimini.",
-    tip_portolotto_desc: "A good choice in the harbour area, especially for dinner near the water.",
-    tip_castel_desc: "A historic castle and a lovely stop during a walk through Rimini centre.",
-    tip_piazza_cavour_desc: "One of the prettiest squares in Rimini, perfect for a short walk or photo.",
-    tip_tre_martiri_desc: "A lively square in the city centre, easy to combine with coffee or gelato.",
-    tip_arco_desc: "The famous Roman arch and one of the most typical landmarks in Rimini.",
-    tip_domus_desc: "An archaeological site in the centre, great for a short cultural stop.",
-    tip_darsena_desc: "A lovely harbour area for an evening walk by the water.",
 
     sec_wedding_party: "Groomsman & Bridesmaids",
     role_best_man: "Groomsman",
@@ -359,8 +331,13 @@ const i18n = {
     nav_tips: "Consigli",
     nav_info: "Info",
     nav_faq: "Domande",
-    nav_rsvp: "Richieste",
+    nav_rsvp: "Conferma",
     nav_game: "Gioco",
+    nav_diz: "Italiano",
+
+    diz_eyebrow: "Prima del matrimonio",
+    diz_title: "Piccolo frasario italiano",
+    diz_subtitle: "Qualche parola per sentirsi a casa — alcune utili, altre solo divertenti.",
 
     hero_date: "19 SETTEMBRE 2026",
     hero_note: "Preparatevi a un weekend sul mare, tra atmosfera italiana e momenti da ricordare insieme.",
@@ -372,7 +349,7 @@ const i18n = {
     prog_aperitivo_note: "",
     prog_photos: "Congratulazioni e foto",
     prog_dinner: "Cena",
-    prog_dance: "Afterparty per i piú coraggiosi",
+    prog_dance: "Primo ballo",
     prog_cake: "Torta nuziale",
     prog_party: "Festa",
 
@@ -386,20 +363,20 @@ const i18n = {
     travel_how: "Come arrivare a Rimini",
     travel_how_desc: "Aggiungeremo i percorsi consigliati in auto, treno o autobus.",
     travel_airports: "Aeroporti vicini",
-    travel_airports_desc: "Le opzioni più vicine: Rimini, Bologna, Ancona o Milano.",
+    travel_airports_desc: "Le opzioni più vicine: Rimini, Bologna o Milano.",
     travel_hotels: "Alloggi consigliati",
-    travel_hotels_desc: "Sono disponibili numerose strutture alberghiere a Rimini e nei dintorni. Per vostra comodità, è disponibile il codice sconto “ZUZYVALE”, che offre il 10% di sconto presso Hotel Imperiale Rimini & SPA per soggiorni di almeno 2 notti. Di seguito trovate il sito dell’hotel.",
+    travel_hotels_desc: "Hotel consigliato per gli ospiti del matrimonio: Hotel Imperiale Rimini & SPA. Il sito dell’hotel è disponibile qui sotto.",
     travel_hotels_btn: "Apri hotel",
     travel_transport: "Trasporti locali",
     travel_transport_desc: "Informazioni su autobus, taxi e trasferimenti tra i luoghi.",
     travel_parking: "Parcheggio",
-    travel_parking_desc: "È disponibile parcheggio presso Tenuta Mara per gli ospiti del matrimonio.",
+    travel_parking_desc: "Aggiungeremo i dettagli sui parcheggi per gli ospiti.",
 
-    rsvp_inline_title: "Richieste speciali",
-    rsvp_inline_lead: "Fatecelo sapere",
-    rsvp_inline_desc: "Se avete richieste speciali, esigenze alimentari, allergie o altre informazioni importanti, scriveteci per favore.",
-    rsvp_inline_until: "",
-    rsvp_inline_btn: "Scriveteci",
+    rsvp_inline_title: "RSVP",
+    rsvp_inline_lead: "Fateci sapere se sarete con noi.",
+    rsvp_inline_desc: "Nel modulo potete confermare la presenza, eventuali allergie e altri dettagli importanti.",
+    rsvp_inline_until: "Si prega di compilare entro",
+    rsvp_inline_btn: "Compila RSVP",
 
     weather_eyebrow: "Weekend di nozze",
     weather_title: "Meteo a Rimini",
@@ -426,25 +403,6 @@ const i18n = {
     tip_view: "Panorama",
     tip_shopping: "Shopping",
     btn_map: "Apri mappa",
-    tips_intro: "Una piccola selezione di posti a Rimini per un caffè, una cena o una passeggiata.",
-    tips_filter_cafes: "Caffetterie",
-    tips_filter_restaurants: "Ristoranti",
-    tips_filter_places: "Luoghi da visitare",
-    tip_visit: "Luogo",
-    tip_pascucci_desc: "Un posto piacevole per un caffè al mattino o una breve pausa passeggiando per Marina Centro.",
-    tip_dallajole_desc: "Un posto carino vicino al porto, ideale per un caffè o qualcosa di piccolo durante una passeggiata.",
-    tip_antica_desc: "Una bella sosta per un caffè nel centro storico della città.",
-    tip_cavour_desc: "Una buona scelta per un caffè in centro, vicino ai luoghi storici.",
-    tip_lella_desc: "Un ristorante sul mare molto amato, perfetto per una cena tranquilla in atmosfera italiana.",
-    tip_esse_desc: "Un posto con cucina locale, ideale per provare qualcosa di tipico della Romagna.",
-    tip_amarina_desc: "Un ristorante piacevole per mangiare vicino al mare e passare una serata tranquilla a Rimini.",
-    tip_portolotto_desc: "Una buona scelta nella zona del porto, soprattutto per una cena vicino all’acqua.",
-    tip_castel_desc: "Un castello storico e una bella tappa durante una passeggiata nel centro di Rimini.",
-    tip_piazza_cavour_desc: "Una delle piazze più belle di Rimini, perfetta per una breve passeggiata o una foto.",
-    tip_tre_martiri_desc: "Una piazza vivace nel centro, da abbinare facilmente a un caffè o a un gelato.",
-    tip_arco_desc: "Il famoso arco romano e uno dei monumenti più tipici di Rimini.",
-    tip_domus_desc: "Un sito archeologico in centro, adatto a una breve tappa culturale.",
-    tip_darsena_desc: "Una bella zona del porto per una passeggiata serale vicino all’acqua.",
 
     sec_wedding_party: "Testimone e damigelle",
     role_best_man: "Testimone",
@@ -514,9 +472,9 @@ const i18n = {
 let currentLang = "sk";
 
 const RSVP_LINKS = {
-  sk: "https://wa.me/4367855838604?text=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1me%20%C5%A1peci%C3%A1lnu%20po%C5%BEiadavku%20k%20svadbe%3A",
-  en: "https://wa.me/4367855838604?text=Hello%2C%20we%20have%20a%20special%20request%20for%20the%20wedding%3A",
-  it: "https://wa.me/4367855838604?text=Ciao%2C%20abbiamo%20una%20richiesta%20speciale%20per%20il%20matrimonio%3A"
+  sk: "https://tally.so/r/A7bLrN",
+  en: "https://tally.so/r/ZjRa4a",
+  it: "https://tally.so/r/BzbkK4"
 };
 
 function applyLang(lang) {
@@ -543,13 +501,9 @@ function applyLang(lang) {
     btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
   });
 
-  // Texts that are written directly in HTML for each language
-  document.querySelectorAll(".dresscode-desc, .dresscode-note, .bank-detail-row [lang]").forEach((el) => {
+  // Dress code description language
+  document.querySelectorAll(".dresscode-desc, .dresscode-note").forEach((el) => {
     el.style.display = el.getAttribute("lang") === lang ? "" : "none";
-  });
-
-  document.querySelectorAll("[data-lang-only]").forEach((el) => {
-    el.style.display = el.getAttribute("data-lang-only") === lang ? "" : "none";
   });
 }
 
@@ -563,20 +517,214 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
 // Nastaviť slovenčinu ako predvolenú
 applyLang("sk");
 
-
 /* =========================================================
-   TIPY FILTERS
+   TALIANSKY SLOVNÍK
    ========================================================= */
-document.querySelectorAll("[data-tip-filter]").forEach((btn) => {
+const phrases = [
+  // --- Pozdravy & slušnosť ---
+  {
+    emoji: "👋",
+    italian: "Ciao!",
+    pronunciation: "ČÁO",
+    sk: "Ahoj! / Čau!",
+    en: "Hi! / Bye!",
+    funny: { sk: "Funguje ako pozdrav aj rozlúčka. Talianska ekonomika slov.", en: "Works as hello AND goodbye. Peak efficiency." }
+  },
+  {
+    emoji: "🌅",
+    italian: "Buongiorno",
+    pronunciation: "bwon-DžOR-no",
+    sk: "Dobré ráno / Dobrý deň",
+    en: "Good morning / Good day",
+    funny: null
+  },
+  {
+    emoji: "🌙",
+    italian: "Buonasera",
+    pronunciation: "bwona-SE-ra",
+    sk: "Dobrý večer",
+    en: "Good evening",
+    funny: null
+  },
+  {
+    emoji: "🙏",
+    italian: "Grazie mille",
+    pronunciation: "GRA-tsje MIL-le",
+    sk: "Ďakujem veľmi pekne",
+    en: "Thank you very much",
+    funny: null
+  },
+  {
+    emoji: "😊",
+    italian: "Prego!",
+    pronunciation: "PRE-go",
+    sk: "Prosím! / Niet za čo!",
+    en: "You're welcome! / Please!",
+    funny: { sk: "Jedno slovo, desať významov. Taliani to zvládli.", en: "One word, ten meanings. Italians figured it out." }
+  },
+  {
+    emoji: "🤝",
+    italian: "Piacere!",
+    pronunciation: "pja-ČE-re",
+    sk: "Teší ma! (pri predstavení)",
+    en: "Nice to meet you!",
+    funny: null
+  },
+  // --- Svadba ---
+  {
+    emoji: "🥂",
+    italian: "Salute!",
+    pronunciation: "sa-LU-te",
+    sk: "Na zdravie!",
+    en: "Cheers!",
+    funny: null
+  },
+  {
+    emoji: "💍",
+    italian: "Gli sposi",
+    pronunciation: "lji SPO-zi",
+    sk: "Novomanželia",
+    en: "The newlyweds",
+    funny: { sk: "„Evviva gli sposi!" = Nech žijú novomanželia! Skúste to zakričať. 🎉", en: "\"Evviva gli sposi!\" = Long live the newlyweds! Try shouting it. 🎉" }
+  },
+  {
+    emoji: "💒",
+    italian: "Il matrimonio",
+    pronunciation: "il ma-tri-MO-nio",
+    sk: "Svadba / manželstvo",
+    en: "Wedding / marriage",
+    funny: null
+  },
+  {
+    emoji: "💐",
+    italian: "Auguri!",
+    pronunciation: "au-GU-ri",
+    sk: "Gratulujeme! / Všetko najlepšie!",
+    en: "Congratulations! / Best wishes!",
+    funny: { sk: "Univerzálne talianske blahoželanie. Na svadbe nikdy nechybí.", en: "Italy's all-purpose congratulation. Never goes wrong at a wedding." }
+  },
+  // --- Jedlo & pitie ---
+  {
+    emoji: "🍝",
+    italian: "Che buono!",
+    pronunciation: "ke BWO-no",
+    sk: "Aké dobré! (o jedle)",
+    en: "How delicious!",
+    funny: null
+  },
+  {
+    emoji: "☕",
+    italian: "Un caffè, per favore",
+    pronunciation: "un kaf-FE, per fa-VO-re",
+    sk: "Kávu, prosím",
+    en: "A coffee, please",
+    funny: { sk: "Cappuccino po 11:00 ráno? Taliani sa budú na vás pozerať divne. ☕", en: "Cappuccino after 11am? Italians will judge you. ☕" }
+  },
+  {
+    emoji: "🍷",
+    italian: "Ancora un po' di vino?",
+    pronunciation: "an-KO-ra un po di VI-no",
+    sk: "Ešte trochu vína?",
+    en: "A little more wine?",
+    funny: { sk: "Správna odpoveď je vždy „Sì, grazie!" 🍷", en: "The correct answer is always \"Sì, grazie!\" 🍷" }
+  },
+  {
+    emoji: "🍕",
+    italian: "Ho fame!",
+    pronunciation: "o FA-me",
+    sk: "Som hladný/á!",
+    en: "I'm hungry!",
+    funny: null
+  },
+  // --- Praktické ---
+  {
+    emoji: "😅",
+    italian: "Non capisco",
+    pronunciation: "non ka-PI-sko",
+    sk: "Nerozumiem",
+    en: "I don't understand",
+    funny: { sk: "Váš záchranný lán v každej situácii. Naučte sa ho naspamäť. 😅", en: "Your lifeline in any situation. Learn this one first. 😅" }
+  },
+  {
+    emoji: "🗺️",
+    italian: "Dov'è il bagno?",
+    pronunciation: "do-VE il BAN-jo",
+    sk: "Kde je toaleta?",
+    en: "Where is the bathroom?",
+    funny: { sk: "Možno najdôležitejšia veta večera po pár pohároch. 🚻", en: "Possibly the most important sentence of the evening. 🚻" }
+  },
+  {
+    emoji: "📸",
+    italian: "Una foto insieme?",
+    pronunciation: "u-na FO-to in-SJE-me",
+    sk: "Odfotíme sa spolu?",
+    en: "A photo together?",
+    funny: null
+  },
+  // --- Romantika & zábava ---
+  {
+    emoji: "❤️",
+    italian: "Ti amo",
+    pronunciation: "ti A-mo",
+    sk: "Milujem ťa",
+    en: "I love you",
+    funny: { sk: "Silnejšie ako „ti voglio bene" — pre partnera, nie kamošov! 😄", en: "Stronger than \"ti voglio bene\" — for your partner, not your mates! 😄" }
+  },
+  {
+    emoji: "🌊",
+    italian: "Che bello!",
+    pronunciation: "ke BEL-lo",
+    sk: "Aké krásne! (všeobecne)",
+    en: "How beautiful! (general)",
+    funny: { sk: "„Che bella" = žena, „che bello" = muž alebo vec. Taliančina dbá na rod. 😄", en: "\"Che bella\" = woman, \"che bello\" = man or thing. Italian cares about gender. 😄" }
+  },
+  {
+    emoji: "🎶",
+    italian: "Andiamo a ballare!",
+    pronunciation: "an-DJA-mo a bal-LA-re",
+    sk: "Ideme tancovať!",
+    en: "Let's dance!",
+    funny: { sk: "Toto zakričte po torte a celá sála pôjde za vami. 🕺", en: "Shout this after the cake and the whole room will follow. 🕺" }
+  },
+  {
+    emoji: "🥰",
+    italian: "Sei bellissimo/a!",
+    pronunciation: "séj bel-LIS-si-mo/a",
+    sk: "Si veľmi krásny/krásna!",
+    en: "You are very beautiful!",
+    funny: { sk: "-o pre muža, -a pre ženu. Nevšimnú si to, ale ocenia to. 😍", en: "-o for a man, -a for a woman. They'll notice, they'll appreciate it. 😍" }
+  },
+];
+
+function renderDizionario() {
+  const grid = document.getElementById("diziGrid");
+  if (!grid) return;
+  const lang = currentLang === "it" ? "sk" : currentLang; // IT hostia vidia SK verziu prekladov
+  grid.innerHTML = phrases.map(p => {
+    const translationLabel = lang === "sk" ? "SK" : "EN";
+    const translationText = lang === "sk" ? p.sk : p.en;
+    const funnyText = p.funny ? (lang === "sk" ? p.funny.sk : p.funny.en) : null;
+    return `
+    <div class="diz-card">
+      <div class="diz-emoji">${p.emoji}</div>
+      <div class="diz-italian">${p.italian}</div>
+      <div class="diz-pronunciation">[${p.pronunciation}]</div>
+      <div class="diz-translations">
+        <div class="diz-trans"><span class="diz-lang-badge diz-lang-it">IT</span>${p.italian}</div>
+        <div class="diz-trans"><span class="diz-lang-badge diz-lang-main">${translationLabel}</span>${translationText}</div>
+      </div>
+      ${funnyText ? `<div class="diz-funny">${funnyText}</div>` : ""}
+    </div>
+  `}).join("");
+}
+
+// Re-render dictionary when language changes
+const _origApplyLang = applyLang;
+// Hook into language switching to re-render dictionary
+document.querySelectorAll("[data-lang]").forEach((btn) => {
   btn.addEventListener("click", () => {
-    const category = btn.getAttribute("data-tip-filter");
-
-    document.querySelectorAll("[data-tip-filter]").forEach((filterBtn) => {
-      filterBtn.classList.toggle("active", filterBtn === btn);
-    });
-
-    document.querySelectorAll("[data-tip-category]").forEach((card) => {
-      card.hidden = card.getAttribute("data-tip-category") !== category;
-    });
+    setTimeout(renderDizionario, 0);
   });
 });
+
+renderDizionario();

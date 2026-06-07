@@ -116,7 +116,7 @@
       <a href="#tipy" data-i18n="nav_tips">Tipy</a>
       <a href="#info" data-i18n="nav_info">Info</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
-      <a href="#rsvp" data-i18n="nav_rsvp">RSVP</a>
+      <a href="#rsvp" data-i18n="nav_rsvp">Požiadavky</a>
       <a href="#hra" data-i18n="nav_game">Hra</a>
       <div class="langs langs-mobile">
         <button data-lang="sk">SK</button><span>|</span>
@@ -207,10 +207,10 @@
 
         <div class="timeline">
           <div class="time">15:00</div><div class="line-dot"></div><span class="church-mini">✦</span><p data-i18n="prog_ceremony">Svadobný obrad</p>
-          <div class="time">17:00</div><div class="line-dot"></div><svg><use href="#icon-dinner"></use></svg><p class="program-aperitivo"><span data-i18n="prog_aperitivo">Aperitivo</span><span class="program-note">Malé občerstvenie pred večerou.</span></p>
-          <div class="time">20:00</div><div class="line-dot"></div><svg><use href="#icon-dinner"></use></svg><p data-i18n="prog_dinner">Večera</p>
-          <div class="time">20:30</div><div class="line-dot"></div><svg><use href="#icon-party"></use></svg><p data-i18n="prog_party">Party</p>
-          <div class="time">21:30</div><div class="line-dot"></div><svg><use href="#icon-music"></use></svg><p data-i18n="prog_dance">Prvý tanec</p>
+          <div class="time"></div><div class="line-dot"></div><svg><use href="#icon-dinner"></use></svg><p class="program-aperitivo"><span data-i18n="prog_aperitivo">Aperitivo</span><span class="program-note">Malé občerstvenie pred večerou.</span></p>
+          <div class="time"></div><div class="line-dot"></div><svg><use href="#icon-dinner"></use></svg><p data-i18n="prog_dinner">Večera</p>
+          <div class="time"></div><div class="line-dot"></div><svg><use href="#icon-party"></use></svg><p data-i18n="prog_party">Party</p>
+          <div class="time"></div><div class="line-dot"></div><svg><use href="#icon-music"></use></svg><p data-i18n="prog_dance">Prvý tanec</p>
         </div>
       </div>
 
@@ -221,13 +221,198 @@
 
         <div class="accordion travel-vertical">
           <details>
-            <summary><svg><use href="#icon-pin"></use></svg> <span data-i18n="travel_how">Ako sa dostať do Rimini</span></summary>
-            <p data-i18n="travel_how_desc">Sem doplníme odporúčané trasy autom, vlakom alebo autobusom.</p>
-          </details>
-          <details>
             <summary><svg><use href="#icon-plane"></use></svg> <span data-i18n="travel_airports">Letiská v okolí</span></summary>
-            <p data-i18n="travel_airports_desc">Najbližšie možnosti: Rimini, Bologna alebo Milano.</p>
+            <p data-i18n="travel_airports_desc">Najbližšie možnosti: Rimini, Bologna, Ancona alebo Milano.</p>
           </details>
+
+          <details class="travel-how-details">
+            <summary><svg><use href="#icon-pin"></use></svg> <span data-i18n="travel_how">Ako sa dostať do Rimini</span></summary>
+
+            <div class="travel-routes">
+              <div class="travel-route-lang" lang="sk">
+                <p class="travel-route-intro">Vyberte si spôsob dopravy alebo letisko, na ktoré prilietate. Po rozkliknutí nájdete najjednoduchšie možnosti presunu do Rimini.</p>
+
+                <details class="route-card">
+                  <summary>Autobus <small>Informácie pre hostí zo Slovenska</small></summary>
+                  <p class="route-note">Pri ceste autobusom vám najlepšie poradí Peter. Má najviac informácií a pomôže vám s praktickými detailmi.</p>
+                </details>
+
+                <details class="route-card">
+                  <summary>Letisko Rimini <small>Aeroporto Internazionale Federico Fellini</small></summary>
+                  <ul>
+                    <li>taxík</li>
+                    <li>autobusová linka 9 z letiska Rimini na vlakovú stanicu Rimini</li>
+                  </ul>
+                </details>
+
+                <details class="route-card">
+                  <summary>Letisko Bologna <small>Aeroporto Guglielmo Marconi · BLQ</small></summary>
+                  <ul>
+                    <li>požičanie auta</li>
+                    <li>Marconi Express z letiska Bologna na stanicu Bologna Centrale + vlak z Bologna Centrale do Rimini</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.marconiexpress.it/" target="_blank" rel="noopener">Marconi Express</a>
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Letisko Ancona <small>Aeroporto Internazionale Raffaello Sanzio</small></summary>
+                  <ul>
+                    <li>požičanie auta</li>
+                    <li>taxík z letiska Ancona na vlakovú stanicu Ancona + vlak zo stanice Ancona do Rimini</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Letisko Milano Malpensa <small>Aeroporto Internazionale Silvio Berlusconi · MXP</small></summary>
+                  <ul>
+                    <li>požičanie auta</li>
+                    <li>kyvadlový autobus z letiska Milano Malpensa na stanicu Milano Centrale + vlak z Milano Centrale do Rimini</li>
+                    <li>Malpensa Express z letiska Milano Malpensa na stanicu Milano Centrale + vlak z Milano Centrale do Rimini</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.malpensaexpress.it/" target="_blank" rel="noopener">Malpensa Express</a>
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Letisko Milano Bergamo-Orio al Serio <small>Aeroporto Internazionale Caravaggio · BGY</small></summary>
+                  <ul>
+                    <li>požičanie auta</li>
+                    <li>kyvadlový autobus z letiska Milano Bergamo-Orio al Serio na stanicu Milano Centrale + vlak z Milano Centrale do Rimini</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+              </div>
+
+              <div class="travel-route-lang" lang="en">
+                <p class="travel-route-intro">Choose the airport you are arriving at. Open each option to see the easiest ways to get to Rimini.</p>
+
+                <details class="route-card">
+                  <summary>Rimini Airport <small>Aeroporto Internazionale Federico Fellini</small></summary>
+                  <ul>
+                    <li>taxi</li>
+                    <li>bus line 9 from Rimini Airport to Rimini Train Station</li>
+                  </ul>
+                </details>
+
+                <details class="route-card">
+                  <summary>Bologna Airport <small>Aeroporto Guglielmo Marconi · BLQ</small></summary>
+                  <ul>
+                    <li>car rental</li>
+                    <li>Marconi Express monorail from Bologna Airport to Bologna Central Train Station + train from Bologna Centrale to Rimini Train Station</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.marconiexpress.it/" target="_blank" rel="noopener">Marconi Express</a>
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Ancona Airport <small>Aeroporto Internazionale Raffaello Sanzio</small></summary>
+                  <ul>
+                    <li>car rental</li>
+                    <li>taxi from Ancona Airport to Ancona Train Station + train from Ancona Train Station to Rimini Train Station</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Milano Malpensa Airport <small>Aeroporto Internazionale Silvio Berlusconi · MXP</small></summary>
+                  <ul>
+                    <li>car rental</li>
+                    <li>shuttle from Milano Malpensa Airport to Milano Central Train Station + train from Milano Centrale to Rimini Train Station</li>
+                    <li>Malpensa Express from Milano Malpensa Airport to Milano Centrale + train from Milano Centrale to Rimini Train Station</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.malpensaexpress.it/" target="_blank" rel="noopener">Malpensa Express</a>
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Milano Bergamo-Orio al Serio Airport <small>Aeroporto Internazionale Caravaggio · BGY</small></summary>
+                  <ul>
+                    <li>car rental</li>
+                    <li>shuttle from Milano Bergamo-Orio al Serio to Milano Central Train Station + train from Milano Centrale to Rimini Train Station</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+              </div>
+
+              <div class="travel-route-lang" lang="it">
+                <p class="travel-route-intro">Scegliete l’aeroporto di arrivo. Aprendo ogni voce troverete le opzioni più semplici per raggiungere Rimini.</p>
+
+                <details class="route-card">
+                  <summary>Aeroporto di Rimini <small>Aeroporto Internazionale Federico Fellini</small></summary>
+                  <ul>
+                    <li>taxi</li>
+                    <li>autobus linea 9 dall’aeroporto di Rimini alla stazione ferroviaria di Rimini</li>
+                  </ul>
+                </details>
+
+                <details class="route-card">
+                  <summary>Aeroporto di Bologna <small>Aeroporto Guglielmo Marconi · BLQ</small></summary>
+                  <ul>
+                    <li>noleggio auto</li>
+                    <li>Marconi Express dall’aeroporto di Bologna alla stazione Bologna Centrale + treno da Bologna Centrale alla stazione di Rimini</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.marconiexpress.it/" target="_blank" rel="noopener">Marconi Express</a>
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Aeroporto di Ancona <small>Aeroporto Internazionale Raffaello Sanzio</small></summary>
+                  <ul>
+                    <li>noleggio auto</li>
+                    <li>taxi dall’aeroporto di Ancona alla stazione ferroviaria di Ancona + treno dalla stazione di Ancona alla stazione di Rimini</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Aeroporto di Milano Malpensa <small>Aeroporto Internazionale Silvio Berlusconi · MXP</small></summary>
+                  <ul>
+                    <li>noleggio auto</li>
+                    <li>navetta da Milano Malpensa a Milano Centrale + treno da Milano Centrale alla stazione di Rimini</li>
+                    <li>Malpensa Express da Milano Malpensa a Milano Centrale + treno da Milano Centrale alla stazione di Rimini</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.malpensaexpress.it/" target="_blank" rel="noopener">Malpensa Express</a>
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+
+                <details class="route-card">
+                  <summary>Aeroporto di Milano Bergamo-Orio al Serio <small>Aeroporto Internazionale Caravaggio · BGY</small></summary>
+                  <ul>
+                    <li>noleggio auto</li>
+                    <li>navetta da Milano Bergamo-Orio al Serio a Milano Centrale + treno da Milano Centrale alla stazione di Rimini</li>
+                  </ul>
+                  <div class="route-links">
+                    <a href="https://www.trenitalia.com/it.html" target="_blank" rel="noopener">Trenitalia</a>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </details>
+
           <details>
             <summary><svg><use href="#icon-hotel"></use></svg> <span data-i18n="travel_hotels">Odporúčané ubytovanie</span></summary>
             <div class="travel-hotel-box">
@@ -235,13 +420,10 @@
               <a class="travel-hotel-link" href="https://www.hirimini.com/en/" target="_blank" rel="noopener" data-i18n="travel_hotels_btn">Otvoriť hotel</a>
             </div>
           </details>
-          <details>
-            <summary><svg><use href="#icon-bus"></use></svg> <span data-i18n="travel_transport">Doprava po meste</span></summary>
-            <p data-i18n="travel_transport_desc">Informácie o MHD, taxíkoch a presunoch medzi obradom a hostinou.</p>
-          </details>
+
           <details>
             <summary><svg><use href="#icon-car"></use></svg> <span data-i18n="travel_parking">Parkovanie</span></summary>
-            <p data-i18n="travel_parking_desc">Sem doplníme, kde môžu hostia zaparkovať.</p>
+            <p data-i18n="travel_parking_desc">V Tenuta Mara je k dispozícii parkovanie pre svadobných hostí.</p>
           </details>
         </div>
       </div>
@@ -253,56 +435,197 @@
       <img class="edge-flower edge-flower-tips-left" src="assets/side-flower-left-full.png" alt="" aria-hidden="true" loading="lazy">
       <img class="tips-mobile-garland" src="assets/tips-mobile-garland.png" alt="" aria-hidden="true" loading="lazy">
 
-      <div class="section-head">
+      <div class="section-head tips-head">
         <h2 data-i18n="sec_tips">Tipy od nás</h2>
         <div class="divider"></div>
+        <p data-i18n="tips_intro">Malý výber miest v Rimini, kam môžete zájsť na kávu, večeru alebo krátku prechádzku.</p>
       </div>
 
-      <div class="tips-grid">
-        <article class="tip-card">
-          <img class="tip-icon" src="assets/coffe.png" alt="Kaviareň" loading="lazy">
-          <span data-i18n="tip_cafe">Kaviareň</span>
+      <div class="tips-filters" aria-label="Kategórie tipov">
+        <button class="tips-filter-btn active" type="button" data-tip-filter="cafes" data-i18n="tips_filter_cafes">Kaviarne</button>
+        <button class="tips-filter-btn" type="button" data-tip-filter="restaurants" data-i18n="tips_filter_restaurants">Reštaurácie</button>
+        <button class="tips-filter-btn" type="button" data-tip-filter="places" data-i18n="tips_filter_places">Miesta na návštevu</button>
+      </div>
+
+      <div class="tips-grid tips-cards-grid">
+        <article class="tip-card tip-place-card" data-tip-category="cafes">
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/pascucci.png" alt="Cafe Pascucci" loading="lazy"></div>
+          <span data-i18n="tip_cafe"></span>
           <div class="tip-text">
-            <h3>La Marianna</h3>
-            <p>Via IV Novembre 35, Rimini RN</p>
+            <h3>Cafe Pascucci</h3>
+            <p>Viale Amerigo Vespucci 3/A, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_pascucci_desc"></p>
           </div>
-          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=La%20Marianna%20Rimini" target="_blank" rel="noopener">
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Cafe%20Pascucci%20Viale%20Amerigo%20Vespucci%203%2FA%20Rimini" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span data-i18n="btn_map">Otvoriť mapu</span>
           </a>
         </article>
-        <article class="tip-card">
-          <img class="tip-icon" src="assets/plate.png" alt="Reštaurácia" loading="lazy">
-          <span data-i18n="tip_restaurant">Reštaurácia</span>
+        <article class="tip-card tip-place-card" data-tip-category="cafes">
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/dalla.png" alt="Dalla Jole" loading="lazy"></div>
+          <span data-i18n="tip_cafe"></span>
           <div class="tip-text">
-            <h3>Osteria del Mare</h3>
-            <p>Via Destra del Porto 41, Rimini RN</p>
+            <h3>Dalla Jole</h3>
+            <p>Via Destra del Porto 2/B, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_dallajole_desc"></p>
           </div>
-          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Osteria%20del%20Mare%20Rimini" target="_blank" rel="noopener">
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Dalla%20Jole%20Via%20Destra%20del%20Porto%202%2FB%20Rimini" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span data-i18n="btn_map">Otvoriť mapu</span>
           </a>
         </article>
-        <article class="tip-card">
-          <img class="tip-icon" src="assets/sun.png" alt="Pláž" loading="lazy">
-          <span data-i18n="tip_beach">Pláž</span>
+        <article class="tip-card tip-place-card" data-tip-category="cafes">
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/antica.png" alt="Antica Cafeteria" loading="lazy"></div>
+          <span data-i18n="tip_cafe"></span>
           <div class="tip-text">
-            <h3>Bagno 26</h3>
-            <p>Lungomare Murri 26, Rimini RN</p>
+            <h3>Antica Cafeteria</h3>
+            <p>Piazza Tre Martiri 47, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_antica_desc"></p>
           </div>
-          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Bagno%2026%20Rimini" target="_blank" rel="noopener">
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Antica%20Cafeteria%20Piazza%20Tre%20Martiri%2047%20Rimini" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span data-i18n="btn_map">Otvoriť mapu</span>
           </a>
         </article>
-        <article class="tip-card">
-          <img class="tip-icon" src="assets/tree.png" alt="Výhľad" loading="lazy">
-          <span data-i18n="tip_view">Výhľad</span>
+        <article class="tip-card tip-place-card" data-tip-category="cafes">
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/cavour.png" alt="Caffè Cavour" loading="lazy"></div>
+          <span data-i18n="tip_cafe"></span>
+          <div class="tip-text">
+            <h3>Caffè Cavour</h3>
+            <p>Piazza Cavour 12, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_cavour_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Caffe%20Cavour%20Piazza%20Cavour%2012%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card" data-tip-category="restaurants" hidden>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/lella.png" alt="Lella al Mare" loading="lazy"></div>
+          <span data-i18n="tip_restaurant"></span>
+          <div class="tip-text">
+            <h3>Lella al Mare</h3>
+            <p>Piazzale Kennedy 2, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_lella_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Lella%20al%20Mare%20Piazzale%20Kennedy%202%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card" data-tip-category="restaurants" hidden>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/esse.png" alt="La Esse Romagnola" loading="lazy"></div>
+          <span data-i18n="tip_restaurant"></span>
+          <div class="tip-text">
+            <h3>La Esse Romagnola</h3>
+            <p>Via Ortaggi 7, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_esse_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=La%20Esse%20Romagnola%20Via%20Ortaggi%207%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card" data-tip-category="restaurants" hidden>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/almarina.png" alt="Amarina" loading="lazy"></div>
+          <span data-i18n="tip_restaurant"></span>
+          <div class="tip-text">
+            <h3>Amarina</h3>
+            <p>Viale Ortigara 49, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_amarina_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Amarina%20Viale%20Ortigara%2049%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card" data-tip-category="restaurants" hidden>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/il.png" alt="Il Portolotto" loading="lazy"></div>
+          <span data-i18n="tip_restaurant"></span>
+          <div class="tip-text">
+            <h3>Il Portolotto</h3>
+            <p>Via Lucio Lando 22, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_portolotto_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Il%20Portolotto%20Via%20Lucio%20Lando%2022%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card tip-visit-card" data-tip-category="places" hidden>
+          <div class="tip-visit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.4-7-12a7 7 0 0 1 14 0c0 6.6-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
+          <span data-i18n="tip_visit">Miesto</span>
           <div class="tip-text">
             <h3>Castel Sismondo</h3>
             <p>Piazza Malatesta, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_castel_desc"></p>
           </div>
-          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Castel%20Sismondo%20Rimini" target="_blank" rel="noopener">
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Castel%20Sismondo%20Piazza%20Malatesta%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card tip-visit-card" data-tip-category="places" hidden>
+          <div class="tip-visit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.4-7-12a7 7 0 0 1 14 0c0 6.6-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
+          <span data-i18n="tip_visit">Miesto</span>
+          <div class="tip-text">
+            <h3>Piazza Cavour</h3>
+            <p>Centro storico, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_piazza_cavour_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Piazza%20Cavour%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card tip-visit-card" data-tip-category="places" hidden>
+          <div class="tip-visit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.4-7-12a7 7 0 0 1 14 0c0 6.6-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
+          <span data-i18n="tip_visit">Miesto</span>
+          <div class="tip-text">
+            <h3>Piazza Tre Martiri</h3>
+            <p>Centro storico, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_tre_martiri_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Piazza%20Tre%20Martiri%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card tip-visit-card" data-tip-category="places" hidden>
+          <div class="tip-visit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.4-7-12a7 7 0 0 1 14 0c0 6.6-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
+          <span data-i18n="tip_visit">Miesto</span>
+          <div class="tip-text">
+            <h3>Arco d’Augusto</h3>
+            <p>Corso d’Augusto, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_arco_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Arco%20d%27Augusto%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card tip-visit-card" data-tip-category="places" hidden>
+          <div class="tip-visit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.4-7-12a7 7 0 0 1 14 0c0 6.6-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
+          <span data-i18n="tip_visit">Miesto</span>
+          <div class="tip-text">
+            <h3>Domus del Chirurgo</h3>
+            <p>Piazza Luigi Ferrari, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_domus_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Domus%20del%20Chirurgo%20Piazza%20Luigi%20Ferrari%20Rimini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="btn_map">Otvoriť mapu</span>
+          </a>
+        </article>
+        <article class="tip-card tip-place-card tip-visit-card" data-tip-category="places" hidden>
+          <div class="tip-visit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.4-7-12a7 7 0 0 1 14 0c0 6.6-7 12-7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
+          <span data-i18n="tip_visit">Miesto</span>
+          <div class="tip-text">
+            <h3>Darsena</h3>
+            <p>Marina di Rimini, Via Ortigara 80, Rimini RN</p>
+            <p class="tip-desc" data-i18n="tip_darsena_desc"></p>
+          </div>
+          <a class="tip-btn" href="https://www.google.com/maps/search/?api=1&query=Marina%20di%20Rimini%20Via%20Ortigara%2080%20Rimini" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span data-i18n="btn_map">Otvoriť mapu</span>
           </a>
@@ -318,9 +641,9 @@
         <div class="info-card-body dresscode-content">
           <svg class="big-icon"><use href="#icon-dress"></use></svg>
           <p class="info-card-label dresscode-label">Elegant / Summer Wedding</p>
-          <p class="info-card-text dresscode-desc" lang="sk">Radi vás uvidíme v elegantnom letnom oblečení. Vhodné sú jemné, prírodné a zemité tóny.</p>
-          <p class="info-card-text dresscode-desc" lang="en" style="display:none">We would love to see you in elegant summer outfits. Soft, natural and earthy tones are welcome.</p>
-          <p class="info-card-text dresscode-desc" lang="it" style="display:none">Vi aspettiamo con abiti estivi eleganti. Sono benvenuti toni delicati, naturali e terrosi.</p>
+          <p class="info-card-text dresscode-desc" lang="sk">Radi vás uvidíme v elegantnom letnom oblečení.</p>
+          <p class="info-card-text dresscode-desc" lang="en" style="display:none">We would love to see you in elegant summer outfits.</p>
+          <p class="info-card-text dresscode-desc" lang="it" style="display:none">Vi aspettiamo con abiti estivi eleganti.</p>
           <p class="info-card-note dresscode-note" lang="sk">Dámy, prosíme bez bielej. Tá patrí neveste.</p>
           <p class="info-card-note dresscode-note" lang="en" style="display:none">Ladies, please avoid white. This colour belongs to the bride.</p>
           <p class="info-card-note dresscode-note" lang="it" style="display:none">Signore, vi chiediamo di evitare il bianco. Questo colore appartiene alla sposa.</p>
@@ -334,7 +657,17 @@
           <svg class="big-icon"><use href="#icon-gift"></use></svg>
           <p class="info-card-text" data-i18n="gift_text">Vaša prítomnosť je pre nás najväčším darom. Ak by ste nás však chceli potešiť svadobným príspevkom, budeme veľmi vďační.</p>
           <p class="info-card-label iban-label">IBAN</p>
-          <div class="iban" id="iban">SK12 0000 0000 0000 0000 0000</div>
+          <div class="iban" id="iban">LT17 3250 0776 9705 0106</div>
+          <div class="bank-details" aria-label="Bankové údaje">
+            <div class="bank-detail-row">
+              <span lang="sk">Meno účtu: <strong>Zuzana Kakascikova &amp; Valerio Maria Guidi</strong></span>
+              <span lang="en" style="display:none">Account name: <strong>Zuzana Kakascikova &amp; Valerio Maria Guidi</strong></span>
+              <span lang="it" style="display:none">Nome conto: <strong>Zuzana Kakascikova &amp; Valerio Maria Guidi</strong></span>
+            </div>
+            <div class="bank-detail-row">
+              <span>BIC/SWIFT: <strong>REVOLT21</strong></span>
+            </div>
+          </div>
           <button class="btn" id="copyIban" data-i18n="btn_copy_iban">Skopírovať IBAN</button>
         </div>
       </article>
@@ -349,7 +682,7 @@
             <p>+421 944 520 369</p>
             <div class="contact-actions">
               <a class="btn small-btn" href="tel:+421944520369" data-i18n="btn_call">Zavolať</a>
-              <a class="btn ghost small-btn" href="https://wa.me/421911123456" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn ghost small-btn" href="https://wa.me/421944520369" target="_blank" rel="noopener">WhatsApp</a>
             </div>
           </div>
           <div class="contact">
@@ -357,25 +690,21 @@
             <p>+43 678 55838604</p>
             <div class="contact-actions">
               <a class="btn small-btn" href="tel:+4367855838604" data-i18n="btn_call">Zavolať</a>
-              <a class="btn ghost small-btn" href="https://wa.me/421654321987" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn ghost small-btn" href="https://wa.me/4367855838604" target="_blank" rel="noopener">WhatsApp</a>
             </div>
           </div>
         </div>
       </article>
 
       <article class="panel mini-panel info-card rsvp-inline-panel" id="rsvp">
-        <h2 data-i18n="rsvp_inline_title">RSVP</h2>
+        <h2 data-i18n="rsvp_inline_title">Špeciálne požiadavky</h2>
         <div class="divider"></div>
         <div class="info-card-body">
           <svg class="big-icon rsvp-inline-icon"><use href="#icon-envelope"></use></svg>
-          <p class="info-card-label rsvp-inline-lead" data-i18n="rsvp_inline_lead">Vyplňte nám, prosím, formulár.</p>
-          <p class="info-card-text rsvp-inline-desc" data-i18n="rsvp_inline_desc">Vo formulári nám potvrdíte účasť, prípadné alergie a ďalšie dôležité informácie.</p>
-          <div class="rsvp-inline-date">
-            <span data-i18n="rsvp_inline_until">Prosíme vyplniť do</span>
-            <strong>30. 7. 2026</strong>
-          </div>
-          <a class="rsvp-inline-btn" id="rsvpBtn" href="https://tally.so/r/A7bLrN" target="_blank" rel="noopener">
-            <span data-i18n="rsvp_inline_btn">Vyplniť RSVP</span>
+          <p class="info-card-label rsvp-inline-lead" data-i18n="rsvp_inline_lead">Dajte nám vedieť</p>
+          <p class="info-card-text rsvp-inline-desc" data-i18n="rsvp_inline_desc">Ak máte špeciálne požiadavky, diéty, alergie alebo čokoľvek, o čom by sme mali vedieť, napíšte nám, prosím.</p>
+          <a class="rsvp-inline-btn" id="rsvpBtn" href="https://wa.me/4367855838604?text=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1me%20%C5%A1peci%C3%A1lnu%20po%C5%BEiadavku%20k%20svadbe%3A" target="_blank" rel="noopener">
+            <span data-i18n="rsvp_inline_btn">Napísať nám</span>
           </a>
         </div>
       </article>
@@ -408,6 +737,14 @@
             <details class="faq-item">
               <summary><span class="faq-q" data-i18n="faq2_q8">Bude po oslave zabezpečená doprava?</span><span class="faq-icon">+</span></summary>
               <p data-i18n="faq2_a8">Informácie o doprave po oslave doplníme čoskoro.</p>
+            </details>
+            <details class="faq-item" data-lang-only="sk">
+              <summary><span class="faq-q">Bude redový tanec?</span><span class="faq-icon">+</span></summary>
+              <p>Nie, redový tanec nebude.</p>
+            </details>
+            <details class="faq-item" data-lang-only="sk">
+              <summary><span class="faq-q">Čo si máme obliecť?</span><span class="faq-icon">+</span></summary>
+              <p>Oblečte si, prosím, niečo elegantné letné, v čom sa budete cítiť príjemne a pohodlne. Dámy prosíme, aby sa vyhli bielej farbe.</p>
             </details>
           </div>
         </div>
