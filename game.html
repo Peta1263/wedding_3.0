@@ -11,6 +11,15 @@
   <link rel="stylesheet" href="style.css" />
 
   <link rel="stylesheet" href="game.css" />
+
+  <!-- Preload images used first in the game so they do not appear late -->
+  <link rel="preload" as="image" href="images/country-sk.png">
+  <link rel="preload" as="image" href="images/country-lu.png">
+  <link rel="preload" as="image" href="images/country-it.png">
+  <link rel="preload" as="image" href="images/room.png">
+  <link rel="preload" as="image" href="images/zapcha.png">
+  <link rel="preload" as="image" href="images/couple.png">
+
 </head>
 <body class="game-page-body">
 
@@ -69,7 +78,7 @@
         <!-- STORY -->
         <div class="game-panel hidden" id="storyScreen">
           <div class="game-scene-card story-card">
-            <img id="storyImage" class="game-scene-image" alt="" />
+            <img id="storyImage" class="game-scene-image" alt="" decoding="async" fetchpriority="high" />
             <p id="storyText" class="game-scene-text"></p>
             <div class="final-slide-actions">
               <button type="button" class="play-btn" id="storyNextBtn">Next</button>

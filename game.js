@@ -23,6 +23,45 @@ document.addEventListener("DOMContentLoaded", () => {
         couple: "images/couple.png"
     };
 
+    const imageCache = new Map();
+
+    function collectSceneImages() {
+        const paths = [];
+
+        function walk(value) {
+            if (!value) return;
+            if (typeof value === "string") {
+                paths.push(value);
+                return;
+            }
+            if (typeof value === "object") {
+                Object.values(value).forEach(walk);
+            }
+        }
+
+        walk(SCENES);
+        return [...new Set(paths)];
+    }
+
+    function preloadImage(src) {
+        if (!src || imageCache.has(src)) return imageCache.get(src);
+
+        const img = new Image();
+        img.decoding = "async";
+        const promise = new Promise((resolve) => {
+            img.onload = () => resolve({ ok: true, src });
+            img.onerror = () => resolve({ ok: false, src });
+        });
+
+        imageCache.set(src, promise);
+        img.src = src;
+        return promise;
+    }
+
+    function preloadGameImages() {
+        collectSceneImages().forEach(preloadImage);
+    };
+
     const introScreen = document.getElementById("introScreen");
     const storyScreen = document.getElementById("storyScreen");
     const packingScreen = document.getElementById("packingScreen");
@@ -1184,16 +1223,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function setStoryImage(src) {
+    async function setStoryImage(src) {
         if (!storyImage) return;
+
         storyImage.classList.remove("image-missing");
+        storyImage.classList.add("image-loading");
         storyImage.onerror = () => {
             storyImage.onerror = null;
+            storyImage.classList.remove("image-loading");
             storyImage.classList.add("image-missing");
             storyImage.removeAttribute("src");
             storyImage.alt = "";
         };
+
+        const result = await preloadImage(src);
+
+        if (!result?.ok) {
+            storyImage.onerror();
+            return;
+        }
+
         storyImage.src = src;
+        storyImage.onload = () => storyImage.classList.remove("image-loading");
     }
 
     function applyLanguage(lang) {
@@ -1323,6 +1374,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    preloadGameImages();
     renderPackingItems();
     applyLanguage(currentLang);
 });

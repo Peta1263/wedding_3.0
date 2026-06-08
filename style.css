@@ -6548,3 +6548,18 @@ html[lang="it"] .travel-route-lang[lang="it"] {
     width: min(100%, 260px) !important;
   }
 }
+
+
+/* =========================================================
+   RSVP — dlhší text a odseky podľa jazyka
+   ========================================================= */
+.info-grid-refined .rsvp-inline-desc {
+  max-width: 285px !important;
+  white-space: pre-line !important;
+}
+
+@media (max-width: 900px) {
+  .info-grid-refined .rsvp-inline-desc {
+    max-width: 300px !important;
+  }
+}

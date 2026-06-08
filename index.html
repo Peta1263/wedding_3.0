@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Z &amp; V · Wedding</title>
+  <link rel="preload" as="image" href="assets/envelope-close.png">
+  <link rel="preload" as="image" href="assets/envelope-open.png">
+  <link rel="preload" as="image" href="assets/silk-bg.webp">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -340,9 +344,9 @@
 </head>
 <body>
   <div class="gate-bg"></div>
-  <img class="flower-mobile" src="assets/mobile-hero-flowers.png" alt="" aria-hidden="true">
-  <img class="flower flower-left"  src="assets/floral-top-left.png"  alt="" aria-hidden="true">
-  <img class="flower flower-right" src="assets/floral-top-right.png" alt="" aria-hidden="true">
+  <img class="flower-mobile" src="assets/mobile-hero-flowers.png" alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async">
+  <img class="flower flower-left"  src="assets/floral-top-left.png"  alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async">
+  <img class="flower flower-right" src="assets/floral-top-right.png" alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async">
 
   <div class="soft-glow"></div>
   <div class="sparkles" aria-hidden="true">
@@ -365,8 +369,8 @@
     <div class="env-scene" id="envScene">
 
       <div class="env-imgs">
-        <img class="env-img env-closed" id="envClosed" src="assets/envelope-close.png" alt="">
-        <img class="env-img env-open"   id="envOpen"   src="assets/envelope-open.png"  alt="">
+        <img class="env-img env-closed" id="envClosed" src="assets/envelope-close.png" alt="" loading="eager" fetchpriority="high" decoding="async">
+        <img class="env-img env-open"   id="envOpen"   src="assets/envelope-open.png"  alt="" loading="eager" fetchpriority="high" decoding="async">
       </div>
 
       <!-- Password floats over the envelope bottom half -->

@@ -10,13 +10,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Faster first screen images -->
+  <link rel="preload" as="image" href="assets/silk-bg.webp">
+  <link rel="preload" as="image" href="assets/mobile-hero-flowers.png" media="(max-width: 900px)">
+  <link rel="preload" as="image" href="assets/floral-top-left.png" media="(min-width: 901px)">
+  <link rel="preload" as="image" href="assets/floral-top-right.png" media="(min-width: 901px)">
+
 </head>
 
 <body>
   <div class="page-background">
     <div class="background-art" aria-hidden="true"></div>
-    <img class="top-flower top-flower-left" src="floral-top-left.png" alt="" aria-hidden="true">
-    <img class="top-flower top-flower-right" src="floral-top-right.png" alt="" aria-hidden="true">
+    <img class="top-flower top-flower-left" src="assets/floral-top-left.png" alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async">
+    <img class="top-flower top-flower-right" src="assets/floral-top-right.png" alt="" aria-hidden="true" loading="eager" fetchpriority="high" decoding="async">
     <div class="side-floral-layer" aria-hidden="true"></div>
     <div class="bottom-landscape" aria-hidden="true"></div>
 
@@ -108,15 +115,13 @@
     <a href="#home" class="logo">Z<span>&</span>V</a>
 
     <nav class="nav" id="nav">
-      <div class="mobile-menu-logo" aria-hidden="true">Z <span>&amp;</span> V</div>
+      <div class="mobile-menu-logo" aria-hidden="true"></div>
       <a href="#home" data-i18n="nav_home">Home</a>
       <a href="#program" data-i18n="nav_program">Program</a>
-      <a href="#miesta" data-i18n="nav_places">Miesta</a>
       <a href="#travel" data-i18n="nav_travel">Travel</a>
       <a href="#tipy" data-i18n="nav_tips">Tipy</a>
       <a href="#info" data-i18n="nav_info">Info</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
-      <a href="#rsvp" data-i18n="nav_rsvp">Požiadavky</a>
       <a href="#hra" data-i18n="nav_game">Hra</a>
       <div class="langs langs-mobile">
         <button data-lang="sk">SK</button><span>|</span>
@@ -172,7 +177,7 @@
 
       <div class="places-row">
         <article class="place-card">
-          <img class="church-img" src="assets/chiesa-san-fortunato.png" alt="Ilustrácia kostola Chiesa di San Fortunato">
+          <img class="church-img" src="assets/chiesa-san-fortunato.png" loading="lazy" decoding="async" alt="Ilustrácia kostola Chiesa di San Fortunato">
           <div class="place-info">
             <h3 data-i18n="place_ceremony">Obrad</h3>
             <strong>Chiesa di San Fortunato</strong>
@@ -184,7 +189,7 @@
         <div class="places-divider"></div>
 
         <article class="place-card">
-          <img class="venue-img" src="assets/tenuta-mara-oslava.png" alt="Ilustrácia miesta oslavy Tenuta Mara">
+          <img class="venue-img" src="assets/tenuta-mara-oslava.png" loading="lazy" decoding="async" alt="Ilustrácia miesta oslavy Tenuta Mara">
           <div class="place-info">
             <h3 data-i18n="place_party">Oslava</h3>
             <strong>Tenuta Mara</strong>
@@ -197,8 +202,8 @@
 
     <!-- ============ 3. PROGRAM + CESTOVANIE ============ -->
     <section class="section split" id="program">
-      <img class="edge-flower edge-flower-program-left" src="assets/side-flower-left-slim.png" alt="" aria-hidden="true">
-      <img class="edge-flower edge-flower-program-right" src="assets/side-flower-right.png" alt="" aria-hidden="true">
+      <img class="edge-flower edge-flower-program-left" src="assets/side-flower-left-slim.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <img class="edge-flower edge-flower-program-right" src="assets/side-flower-right.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
 
       <div class="panel timeline-panel">
         <h2 data-i18n="sec_program">Program</h2>
@@ -449,7 +454,7 @@
 
       <div class="tips-grid tips-cards-grid">
         <article class="tip-card tip-place-card" data-tip-category="cafes">
-          <div class="tip-photo-wrap"><img class="tip-photo" src="images/pascucci.png" alt="Cafe Pascucci" loading="lazy"></div>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/pascucci.png" alt="Cafe Pascucci" loading="lazy" decoding="async"></div>
           <span data-i18n="tip_cafe"></span>
           <div class="tip-text">
             <h3>Cafe Pascucci</h3>
@@ -462,7 +467,7 @@
           </a>
         </article>
         <article class="tip-card tip-place-card" data-tip-category="cafes">
-          <div class="tip-photo-wrap"><img class="tip-photo" src="images/dalla.png" alt="Dalla Jole" loading="lazy"></div>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/dalla.png" alt="Dalla Jole" loading="lazy" decoding="async"></div>
           <span data-i18n="tip_cafe"></span>
           <div class="tip-text">
             <h3>Dalla Jole</h3>
@@ -475,7 +480,7 @@
           </a>
         </article>
         <article class="tip-card tip-place-card" data-tip-category="cafes">
-          <div class="tip-photo-wrap"><img class="tip-photo" src="images/antica.png" alt="Antica Cafeteria" loading="lazy"></div>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/antica.png" alt="Antica Cafeteria" loading="lazy" decoding="async"></div>
           <span data-i18n="tip_cafe"></span>
           <div class="tip-text">
             <h3>Antica Cafeteria</h3>
@@ -488,7 +493,7 @@
           </a>
         </article>
         <article class="tip-card tip-place-card" data-tip-category="cafes">
-          <div class="tip-photo-wrap"><img class="tip-photo" src="images/cavour.png" alt="Caffè Cavour" loading="lazy"></div>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/cavour.png" alt="Caffè Cavour" loading="lazy" decoding="async"></div>
           <span data-i18n="tip_cafe"></span>
           <div class="tip-text">
             <h3>Caffè Cavour</h3>
@@ -501,7 +506,7 @@
           </a>
         </article>
         <article class="tip-card tip-place-card" data-tip-category="restaurants" hidden>
-          <div class="tip-photo-wrap"><img class="tip-photo" src="images/lella.png" alt="Lella al Mare" loading="lazy"></div>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/lella.png" alt="Lella al Mare" loading="lazy" decoding="async"></div>
           <span data-i18n="tip_restaurant"></span>
           <div class="tip-text">
             <h3>Lella al Mare</h3>
@@ -514,7 +519,7 @@
           </a>
         </article>
         <article class="tip-card tip-place-card" data-tip-category="restaurants" hidden>
-          <div class="tip-photo-wrap"><img class="tip-photo" src="images/esse.png" alt="La Esse Romagnola" loading="lazy"></div>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/esse.png" alt="La Esse Romagnola" loading="lazy" decoding="async"></div>
           <span data-i18n="tip_restaurant"></span>
           <div class="tip-text">
             <h3>La Esse Romagnola</h3>
@@ -527,7 +532,7 @@
           </a>
         </article>
         <article class="tip-card tip-place-card" data-tip-category="restaurants" hidden>
-          <div class="tip-photo-wrap"><img class="tip-photo" src="images/almarina.png" alt="Amarina" loading="lazy"></div>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/almarina.png" alt="Amarina" loading="lazy" decoding="async"></div>
           <span data-i18n="tip_restaurant"></span>
           <div class="tip-text">
             <h3>Amarina</h3>
@@ -540,7 +545,7 @@
           </a>
         </article>
         <article class="tip-card tip-place-card" data-tip-category="restaurants" hidden>
-          <div class="tip-photo-wrap"><img class="tip-photo" src="images/il.png" alt="Il Portolotto" loading="lazy"></div>
+          <div class="tip-photo-wrap"><img class="tip-photo" src="images/il.png" alt="Il Portolotto" loading="lazy" decoding="async"></div>
           <span data-i18n="tip_restaurant"></span>
           <div class="tip-text">
             <h3>Il Portolotto</h3>
@@ -703,9 +708,7 @@
           <svg class="big-icon rsvp-inline-icon"><use href="#icon-envelope"></use></svg>
           <p class="info-card-label rsvp-inline-lead" data-i18n="rsvp_inline_lead">Dajte nám vedieť</p>
           <p class="info-card-text rsvp-inline-desc" data-i18n="rsvp_inline_desc">Ak máte špeciálne požiadavky, diéty, alergie alebo čokoľvek, o čom by sme mali vedieť, napíšte nám, prosím.</p>
-          <a class="rsvp-inline-btn" id="rsvpBtn" href="https://wa.me/4367855838604?text=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1me%20%C5%A1peci%C3%A1lnu%20po%C5%BEiadavku%20k%20svadbe%3A" target="_blank" rel="noopener">
-            <span data-i18n="rsvp_inline_btn">Napísať nám</span>
-          </a>
+          
         </div>
       </article>
     </section>
