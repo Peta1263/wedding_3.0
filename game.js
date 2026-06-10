@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const packingScreen = document.getElementById("packingScreen");
     const roadScreen = document.getElementById("roadScreen");
     const securityScreen = document.getElementById("securityScreen");
+    const italianWordsScreen = document.getElementById("italianWordsScreen");
     const finalScreen = document.getElementById("finalScreen");
 
     const beginJourneyBtn = document.getElementById("beginJourneyBtn");
@@ -74,6 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const resetSuitcaseBtn = document.getElementById("resetSuitcaseBtn") || document.getElementById("resetKuforBtn");
     const repackBtn = document.getElementById("repackBtn");
     const downloadPrizeBtn = document.getElementById("downloadPrizeBtn");
+    const italianWordsList = document.getElementById("italianWordsList");
+    const translationWordsList = document.getElementById("translationWordsList");
+    const wordsMessage = document.getElementById("wordsMessage");
+    const wordsContinueBtn = document.getElementById("wordsContinueBtn");
 
     const guestNameInput = document.getElementById("guestName");
     const guestCountrySelect = document.getElementById("guestCountry");
@@ -110,7 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("stepIndicator1"),
         document.getElementById("stepIndicator2"),
         document.getElementById("stepIndicator3"),
-        document.getElementById("stepIndicator4")
+        document.getElementById("stepIndicator4"),
+        document.getElementById("stepIndicator5")
     ];
 
     const langButtons = document.querySelectorAll("[data-lang]");
@@ -191,7 +197,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 "game.finalTitle": "Zvládol/a si to",
                 "game.rewardText": "Tvoja výhra: tanec s novomanželmi",
                 "game.downloadPrize": "Stiahnuť odmenu",
-                "game.backSite": "Späť na stránku"
+                "game.backSite": "Späť na stránku",
+                "step.pack": "1. Kufor",
+                "step.travel": "2. Cesta",
+                "step.airport": "3. Letisko",
+                "step.words": "4. Slovíčka",
+                "step.arrival": "5. Príchod",
+                "words.title": "Talianske slovíčka",
+                "words.text": "Spoj talianske slovíčka so správnym slovenským prekladom.",
+                "words.italian": "Taliansky",
+                "words.translation": "Slovensky",
+                "words.continue": "Pokračovať"
             },
             prize: {
                 lang: "sk",
@@ -278,7 +294,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 "game.finalTitle": "You made it",
                 "game.rewardText": "Your prize: a dance with the newlyweds",
                 "game.downloadPrize": "Download reward",
-                "game.backSite": "Back to website"
+                "game.backSite": "Back to website",
+                "step.pack": "1. Pack",
+                "step.travel": "2. Travel",
+                "step.airport": "3. Airport",
+                "step.words": "4. Words",
+                "step.arrival": "5. Arrival",
+                "words.title": "Italian word match",
+                "words.text": "Match the Italian words with the correct English translations.",
+                "words.italian": "Italian",
+                "words.translation": "English",
+                "words.continue": "Continue"
             },
             prize: {
                 lang: "en",
@@ -365,7 +391,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 "game.finalTitle": "Ce l'hai fatta",
                 "game.rewardText": "Il tuo premio: un ballo con gli sposi",
                 "game.downloadPrize": "Scarica il premio",
-                "game.backSite": "Torna al sito"
+                "game.backSite": "Torna al sito",
+                "step.pack": "1. Valigia",
+                "step.travel": "2. Viaggio",
+                "step.airport": "3. Aeroporto",
+                "step.words": "4. Sfida",
+                "step.arrival": "5. Arrivo",
+                "words.title": "Sfida del matrimonio",
+                "words.text": "Abbina ogni simbolo alla parte giusta del viaggio verso la festa.",
+                "words.italian": "Simbolo",
+                "words.translation": "Significato",
+                "words.continue": "Continua"
             },
             prize: {
                 lang: "it",
@@ -382,6 +418,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let playerName = "";
     let playerCountry = "sk";
     let packedItems = [];
+    let selectedItalianWord = null;
+    let selectedTranslationWord = null;
+    let matchedWords = new Set();
+    let translationWordOrder = [];
 
     let currentStorySlides = [];
     let currentStoryIndex = 0;
@@ -414,6 +454,22 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "passport", icon: "🛂" },
         { id: "keys", icon: "🔑" },
         { id: "danger", icon: "❗" }
+    ];
+
+    const italianWordPairs = [
+        { id: "ciao", it: "Ciao", sk: "Ahoj", en: "Hello" },
+        { id: "grazie", it: "Grazie", sk: "Ďakujem", en: "Thank you" },
+        { id: "prego", it: "Prego", sk: "Prosím", en: "You are welcome" },
+        { id: "mare", it: "Mare", sk: "More", en: "Sea" },
+        { id: "amore", it: "Amore", sk: "Láska", en: "Love" }
+    ];
+
+    const italianWeddingPairs = [
+        { id: "suitcase", it: "🧳 Valigia", sk: "Partenza", en: "Start of the trip" },
+        { id: "plane", it: "✈️ Aereo", sk: "Viaggio", en: "Journey" },
+        { id: "church", it: "⛪ Chiesa", sk: "Cerimonia", en: "Ceremony" },
+        { id: "cake", it: "🍰 Torta", sk: "Festa", en: "Celebration" },
+        { id: "dance", it: "💃 Ballo", sk: "Premio", en: "Prize" }
     ];
 
     const playerBus = {
@@ -454,7 +510,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showScreen(screen) {
-        [introScreen, storyScreen, packingScreen, roadScreen, securityScreen, finalScreen].forEach((el) => {
+        [introScreen, storyScreen, packingScreen, roadScreen, securityScreen, italianWordsScreen, finalScreen].forEach((el) => {
             if (el) el.classList.add("hidden");
         });
         screen.classList.remove("hidden");
@@ -611,6 +667,8 @@ document.addEventListener("DOMContentLoaded", () => {
             alert(t("alerts", "packItems"));
             return;
         }
+
+        setStep(1);
 
         startStory(
             [
@@ -870,10 +928,129 @@ document.addEventListener("DOMContentLoaded", () => {
                 securityMessage.textContent = TEXTS[currentLang].story.securityOk;
 
                 setTimeout(() => {
-                    startFinalStory();
-                }, 1800);
+                    startItalianWordsGame();
+                }, 1200);
             }
         }, 1800);
+    }
+
+
+    function getCurrentWordPairs() {
+        return currentLang === "it" ? italianWeddingPairs : italianWordPairs;
+    }
+
+    function getWordTranslation(pair) {
+        if (currentLang === "sk") return pair.sk;
+        if (currentLang === "it") return pair.sk;
+        return pair.en;
+    }
+
+    function shuffleArray(array) {
+        return array
+            .map((value) => ({ value, sort: Math.random() }))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({ value }) => value);
+    }
+
+    function startItalianWordsGame() {
+        showScreen(italianWordsScreen);
+        setStep(3);
+        selectedItalianWord = null;
+        selectedTranslationWord = null;
+        matchedWords = new Set();
+        translationWordOrder = shuffleArray(getCurrentWordPairs());
+        renderItalianWordsGame();
+    }
+
+    function renderItalianWordsGame() {
+        if (!italianWordsList || !translationWordsList) return;
+
+        italianWordsList.innerHTML = "";
+        translationWordsList.innerHTML = "";
+
+        const currentPairs = getCurrentWordPairs();
+
+        if (!translationWordOrder.length) {
+            translationWordOrder = shuffleArray(currentPairs);
+        }
+
+        currentPairs.forEach((pair) => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "word-choice";
+            btn.dataset.id = pair.id;
+            btn.textContent = pair.it;
+            btn.disabled = matchedWords.has(pair.id);
+            btn.classList.toggle("matched", matchedWords.has(pair.id));
+            btn.classList.toggle("selected", selectedItalianWord === pair.id);
+            btn.addEventListener("click", () => chooseItalianWord(pair.id));
+            italianWordsList.appendChild(btn);
+        });
+
+        translationWordOrder.forEach((pair) => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "word-choice";
+            btn.dataset.id = pair.id;
+            btn.textContent = getWordTranslation(pair);
+            btn.disabled = matchedWords.has(pair.id);
+            btn.classList.toggle("matched", matchedWords.has(pair.id));
+            btn.classList.toggle("selected", selectedTranslationWord === pair.id);
+            btn.addEventListener("click", () => chooseTranslationWord(pair.id));
+            translationWordsList.appendChild(btn);
+        });
+
+        updateWordsMessage();
+    }
+
+    function chooseItalianWord(id) {
+        if (matchedWords.has(id)) return;
+        selectedItalianWord = id;
+        checkSelectedWords();
+        renderItalianWordsGame();
+    }
+
+    function chooseTranslationWord(id) {
+        if (matchedWords.has(id)) return;
+        selectedTranslationWord = id;
+        checkSelectedWords();
+        renderItalianWordsGame();
+    }
+
+    function checkSelectedWords() {
+        if (!selectedItalianWord || !selectedTranslationWord) return;
+
+        if (selectedItalianWord === selectedTranslationWord) {
+            matchedWords.add(selectedItalianWord);
+        }
+
+        selectedItalianWord = null;
+        selectedTranslationWord = null;
+    }
+
+    function updateWordsMessage() {
+        if (!wordsMessage || !wordsContinueBtn) return;
+
+        const messages = {
+            sk: {
+                progress: (n, total) => `Správne spojené: ${n} / ${total}`,
+                done: "Výborne, všetky slovíčka sú správne."
+            },
+            en: {
+                progress: (n, total) => `Correct matches: ${n} / ${total}`,
+                done: "Great, all words are matched."
+            },
+            it: {
+                progress: (n, total) => `Abbinamenti corretti: ${n} / ${total}`,
+                done: "Perfetto, sfida completata."
+            }
+        };
+
+        const dict = messages[currentLang] || messages.en;
+        const total = getCurrentWordPairs().length;
+        const done = matchedWords.size === total;
+        wordsMessage.textContent = done ? dict.done : dict.progress(matchedWords.size, total);
+        wordsContinueBtn.disabled = !done;
     }
 
     function startFinalStory() {
@@ -914,7 +1091,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function openFinalScreen() {
         showScreen(finalScreen);
-        setStep(3);
+        setStep(4);
         finalPersonalText.textContent = TEXTS[currentLang].story.welcome(playerName);
     }
 
@@ -1292,6 +1469,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
+        if (italianWordsScreen && !italianWordsScreen.classList.contains("hidden")) {
+            selectedItalianWord = null;
+            selectedTranslationWord = null;
+            matchedWords = new Set();
+            translationWordOrder = shuffleArray(getCurrentWordPairs());
+            renderItalianWordsGame();
+        }
+
         if (finalScreen && !finalScreen.classList.contains("hidden") && playerName) {
             finalPersonalText.textContent = TEXTS[currentLang].story.welcome(playerName);
         }
@@ -1356,6 +1541,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scannerLight.classList.remove("ok", "fail");
         openPackingScreen();
     });
+    if (wordsContinueBtn) wordsContinueBtn.addEventListener("click", startFinalStory);
     downloadPrizeBtn.addEventListener("click", downloadPrize);
 
     document.addEventListener("keydown", (e) => {

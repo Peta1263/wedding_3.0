@@ -48,10 +48,11 @@
 
         <!-- Progress steps -->
         <div class="game-progress-wrap">
-          <div class="game-step active current" id="stepIndicator1">1. Pack</div>
-          <div class="game-step" id="stepIndicator2">2. Travel</div>
-          <div class="game-step" id="stepIndicator3">3. Airport</div>
-          <div class="game-step" id="stepIndicator4">4. Arrival</div>
+          <div class="game-step active current" id="stepIndicator1" data-game-i18n="step.pack">1. Pack</div>
+          <div class="game-step" id="stepIndicator2" data-game-i18n="step.travel">2. Travel</div>
+          <div class="game-step" id="stepIndicator3" data-game-i18n="step.airport">3. Airport</div>
+          <div class="game-step" id="stepIndicator4" data-game-i18n="step.words">4. Words</div>
+          <div class="game-step" id="stepIndicator5" data-game-i18n="step.arrival">5. Arrival</div>
         </div>
 
         <!-- INTRO -->
@@ -164,6 +165,29 @@
             <div class="security-actions hidden" id="securityRetryWrap">
               <button class="play-btn" id="repackBtn" type="button" data-game-i18n="game.repack">Repack the suitcase</button>
             </div>
+          </div>
+        </div>
+
+
+        <!-- ITALIAN WORDS – Level 4 -->
+        <div class="game-panel hidden" id="italianWordsScreen">
+          <div class="words-card">
+            <h2 class="game-section-title" data-game-i18n="words.title">Italian word match</h2>
+            <p class="game-text center" data-game-i18n="words.text">Match the Italian words with the correct translations.</p>
+
+            <div class="words-board">
+              <div class="words-column">
+                <h3 data-game-i18n="words.italian">Italian</h3>
+                <div id="italianWordsList" class="words-list"></div>
+              </div>
+              <div class="words-column">
+                <h3 data-game-i18n="words.translation">Translation</h3>
+                <div id="translationWordsList" class="words-list"></div>
+              </div>
+            </div>
+
+            <p id="wordsMessage" class="words-message"></p>
+            <button class="play-btn" id="wordsContinueBtn" type="button" disabled data-game-i18n="words.continue">Continue</button>
           </div>
         </div>
 

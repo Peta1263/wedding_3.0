@@ -1090,3 +1090,106 @@ body.game-page-body::after {
   position: relative !important;
   z-index: 2 !important;
 }
+
+/* =========================================================
+   ITALIAN WORDS GAME
+   ========================================================= */
+.words-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: rgba(255,252,246,0.9);
+  border: 1px solid rgba(184, 138, 56, 0.28);
+  border-radius: 24px;
+  padding: 44px 46px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(60,47,29,0.10);
+}
+
+.words-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 30px 0 20px;
+}
+
+.words-column {
+  padding: 20px;
+  border: 1px solid rgba(184, 138, 56, 0.24);
+  border-radius: 18px;
+  background: rgba(255, 252, 246, 0.58);
+}
+
+.words-column h3 {
+  margin: 0 0 16px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--olive-dark);
+}
+
+.words-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.word-choice {
+  min-height: 46px;
+  padding: 10px 16px;
+  border: 1px solid rgba(184, 138, 56, 0.30);
+  border-radius: 12px;
+  background: rgba(255, 252, 246, 0.92);
+  color: var(--olive-dark);
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s, border-color .2s, transform .15s;
+}
+
+.word-choice:hover:not(:disabled),
+.word-choice.selected {
+  border-color: var(--gold);
+  background: rgba(184, 138, 56, 0.10);
+  transform: translateY(-1px);
+}
+
+.word-choice.matched {
+  background: rgba(77, 95, 53, 0.14);
+  border-color: rgba(77, 95, 53, 0.38);
+  color: var(--olive-dark);
+  cursor: default;
+}
+
+.words-message {
+  min-height: 28px;
+  margin: 8px 0 22px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  font-style: italic;
+  color: var(--muted);
+}
+
+#wordsContinueBtn:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 760px) {
+  .words-card {
+    padding: 32px 20px;
+  }
+
+  .words-board {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .words-column {
+    padding: 16px;
+  }
+}
