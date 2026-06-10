@@ -582,6 +582,22 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
 applyLang("sk");
 
 // Prepínanie kategórií v sekcii Tipy od nás
+function preloadTipImages(category) {
+  const selector = category
+    ? `[data-tip-category="${category}"] img[src]`
+    : "[data-tip-category] img[src]";
+
+  document.querySelectorAll(selector).forEach((img) => {
+    const src = img.getAttribute("src");
+    if (!src || img.dataset.preloaded === "true") return;
+
+    const preload = new Image();
+    preload.decoding = "async";
+    preload.src = src;
+    img.dataset.preloaded = "true";
+  });
+}
+
 function setupTipsFilters() {
   const filterButtons = document.querySelectorAll(".tips-filter-btn");
   const tipCards = document.querySelectorAll("[data-tip-category]");
@@ -589,6 +605,8 @@ function setupTipsFilters() {
   if (!filterButtons.length || !tipCards.length) return;
 
   function showCategory(category) {
+    preloadTipImages(category);
+
     filterButtons.forEach((btn) => {
       btn.classList.toggle("active", btn.getAttribute("data-tip-filter") === category);
     });
@@ -600,13 +618,26 @@ function setupTipsFilters() {
   }
 
   filterButtons.forEach((btn) => {
+    const category = btn.getAttribute("data-tip-filter");
+
+    btn.addEventListener("mouseenter", () => preloadTipImages(category));
+    btn.addEventListener("focus", () => preloadTipImages(category));
+
     btn.addEventListener("click", () => {
-      showCategory(btn.getAttribute("data-tip-filter"));
+      showCategory(category);
     });
   });
 
   const activeButton = document.querySelector(".tips-filter-btn.active") || filterButtons[0];
   showCategory(activeButton.getAttribute("data-tip-filter"));
+
+  // Skryté kategórie majú lazy obrázky, preto ich po načítaní stránky pripravíme do cache.
+  const preloadAllTips = () => preloadTipImages();
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(preloadAllTips, { timeout: 2000 });
+  } else {
+    window.addEventListener("load", () => setTimeout(preloadAllTips, 800), { once: true });
+  }
 }
 
 setupTipsFilters();
