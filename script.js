@@ -80,7 +80,7 @@ const i18n = {
     rsvp_inline_title: "Špeciálne požiadavky",
     rsvp_inline_lead: "Potvrdenie účasti",
     rsvp_inline_desc: "Prosíme vás o potvrdenie účasti. Zároveň nám, prosím, dajte vedieť, či máte akékoľvek diétne požiadavky alebo alergie.\n\nNapísať nám môžete cez kontakty v sekcii Kontakty.\n\nVopred vám ďakujeme za odpoveď a tešíme sa na oslavu s vami.",
-    rsvp_inline_until: "",
+    rsvp_inline_until: "Prosíme o potvrdenie účasti najneskôr do 31. 7. 2026.",
     rsvp_inline_btn: "Napísať nám",
 
     weather_eyebrow: "Svadobný víkend",
@@ -245,7 +245,7 @@ const i18n = {
     rsvp_inline_title: "Special requests",
     rsvp_inline_lead: "RSVP",
     rsvp_inline_desc: "Please kindly confirm your participation and let us know about any dietary requirements or allergies.\n\nYou can contact us through the Contacts section.\n\nWe appreciate your response in advance and look forward to celebrating with you.",
-    rsvp_inline_until: "",
+    rsvp_inline_until: "Please confirm your attendance by 31 July 2026.",
     rsvp_inline_btn: "Write to us",
 
     weather_eyebrow: "Wedding weekend",
@@ -410,7 +410,7 @@ const i18n = {
     rsvp_inline_title: "Richieste speciali",
     rsvp_inline_lead: "Conferma presenza",
     rsvp_inline_desc: "Vi chiediamo gentilmente di confermare la vostra presenza e di comunicarci eventuali esigenze o allergie alimentari.\n\nPotete contattarci tramite la sezione Contatti.\n\nNon vediamo l’ora di festeggiare con voi.",
-    rsvp_inline_until: "",
+    rsvp_inline_until: "Vi chiediamo di confermare la vostra presenza entro il 31 luglio 2026.",
     rsvp_inline_btn: "Scriveteci",
 
     weather_eyebrow: "Weekend di nozze",
