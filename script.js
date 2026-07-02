@@ -241,7 +241,7 @@ const i18n = {
     travel_parking: "Parking",
     travel_parking_desc: "Parking is available at Tenuta Mara for wedding guests.",
 
-    rsvp_inline_lead: "Please RSVP by 31 June 2026.",
+    rsvp_inline_lead: "Please RSVP by 31.06.2026.",
     rsvp_inline_desc: "Please also let us know about any dietary requirements or allergies.\n\nYou can contact us through the Contacts section.\n\nThank you — we look forward to celebrating with you.",
     rsvp_inline_until: "",
     rsvp_inline_btn: "Write to us",
