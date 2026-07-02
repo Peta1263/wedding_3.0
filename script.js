@@ -77,9 +77,8 @@ const i18n = {
     travel_parking: "Parkovanie",
     travel_parking_desc: "V Tenuta Mara je k dispozícii parkovanie pre svadobných hostí.",
 
-    rsvp_inline_title: "Špeciálne požiadavky",
-    rsvp_inline_lead: "Potvrďte účasť do 31. 7. 2026",
-    rsvp_inline_desc: "Prosíme vás o potvrdenie účasti. Zároveň nám, prosím, dajte vedieť, či máte akékoľvek diétne požiadavky alebo alergie.\n\nNapísať nám môžete cez kontakty v sekcii Kontakty.\n\nVopred vám ďakujeme za odpoveď a tešíme sa na oslavu s vami.",
+    rsvp_inline_lead: "Potvrďte účasť do 31.06. 2026.",
+    rsvp_inline_desc: "Zároveň nám, prosím, dajte vedieť, či máte akékoľvek diétne požiadavky alebo alergie.\n\nKontaktovať nás môžete cez sekciu Kontakty.\n\nĎakujeme a tešíme sa na oslavu s vami.",
     rsvp_inline_until: "",
     rsvp_inline_btn: "Napísať nám",
 
@@ -242,9 +241,8 @@ const i18n = {
     travel_parking: "Parking",
     travel_parking_desc: "Parking is available at Tenuta Mara for wedding guests.",
 
-    rsvp_inline_title: "Special requests",
-    rsvp_inline_lead: "Please RSVP by 31 July 2026",
-    rsvp_inline_desc: "Please kindly confirm your participation and let us know about any dietary requirements or allergies.\n\nYou can contact us through the Contacts section.\n\nWe appreciate your response in advance and look forward to celebrating with you.",
+    rsvp_inline_lead: "Please RSVP by 31 June 2026.",
+    rsvp_inline_desc: "Please also let us know about any dietary requirements or allergies.\n\nYou can contact us through the Contacts section.\n\nThank you — we look forward to celebrating with you.",
     rsvp_inline_until: "",
     rsvp_inline_btn: "Write to us",
 
@@ -407,9 +405,8 @@ const i18n = {
     travel_parking: "Parcheggio",
     travel_parking_desc: "È disponibile parcheggio presso Tenuta Mara per gli ospiti del matrimonio.",
 
-    rsvp_inline_title: "Richieste speciali",
-    rsvp_inline_lead: "Confermate la presenza entro il 31 luglio 2026",
-    rsvp_inline_desc: "Vi chiediamo gentilmente di confermare la vostra presenza e di comunicarci eventuali esigenze o allergie alimentari.\n\nPotete contattarci tramite la sezione Contatti.\n\nNon vediamo l’ora di festeggiare con voi.",
+    rsvp_inline_lead: "Confermate la presenza entro il 31.06.2026.",
+    rsvp_inline_desc: "Vi chiediamo inoltre di comunicarci eventuali esigenze alimentari o allergie.\n\nPotete contattarci tramite la sezione Contatti.\n\nGrazie, non vediamo l’ora di festeggiare con voi.",
     rsvp_inline_until: "",
     rsvp_inline_btn: "Scriveteci",
 
