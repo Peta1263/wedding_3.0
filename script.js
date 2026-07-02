@@ -541,6 +541,9 @@ function applyLang(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
 
+  document.documentElement.setAttribute("translate", "no");
+  document.documentElement.classList.add("notranslate");
+
   const dict = i18n[lang];
   if (!dict) return;
 
